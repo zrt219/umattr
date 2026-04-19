@@ -1,0 +1,9 @@
+.next
+node_modules
+.vercel
+dev.out.log
+dev.err.log
+qa-shots/
+qa-shots-local/
+
+.vercel
