@@ -24,9 +24,16 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          overflow: "hidden",
         }}
       >
-        <img src={markDataUrl} alt="UMATTR" width="512" height="512" />
+        <img
+          src={markDataUrl}
+          alt="UMATTR"
+          width="512"
+          height="512"
+          style={{ transform: "scale(3)", transformOrigin: "center center" }}
+        />
       </div>
     ),
     size

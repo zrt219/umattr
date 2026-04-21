@@ -24,9 +24,16 @@ export default async function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          overflow: "hidden",
         }}
       >
-        <img src={markDataUrl} alt="UMATTR" width="180" height="180" />
+        <img
+          src={markDataUrl}
+          alt="UMATTR"
+          width="180"
+          height="180"
+          style={{ transform: "scale(3)", transformOrigin: "center center" }}
+        />
       </div>
     ),
     size
