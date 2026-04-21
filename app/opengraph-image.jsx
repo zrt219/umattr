@@ -86,7 +86,7 @@ export default async function OpenGraphImage() {
                 letterSpacing: "-0.05em",
               }}
             >
-              AI programs, career intelligence, and consulting.
+              Practical AI programs, career intelligence, and premium advisory.
             </div>
             <div
               style={{
@@ -95,8 +95,7 @@ export default async function OpenGraphImage() {
                 color: "rgba(246, 238, 219, 0.82)",
               }}
             >
-              Free entry on UMATTR. Programs and product access route through
-              Payhip.
+              UMATTR helps people and businesses grow, adapt, and stay ahead.
             </div>
           </div>
         </div>

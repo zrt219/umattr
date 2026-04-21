@@ -3,7 +3,7 @@ import './globals.css';
 export const metadata = {
   metadataBase: new URL('https://umattrv4.vercel.app'),
   title: 'UMATTR | AI programs, career intelligence, and consulting',
-  description: 'Premium UMATTR routes for free entry, AI programs, career intelligence, and consulting.',
+  description: 'UMATTR offers practical AI programs, career intelligence, and premium advisory to help people and businesses grow, adapt, and stay ahead.',
   icons: {
     icon: '/icon',
     apple: '/apple-icon',
