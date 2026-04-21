@@ -11,7 +11,7 @@ export const contentType = "image/png";
 
 export default async function Icon() {
   const mark = await readFile(
-    path.join(process.cwd(), "public", "brand", "umattr-mark.png")
+    path.join(process.cwd(), "public", "brand", "umattr-favicon.png")
   );
   const markDataUrl = `data:image/png;base64,${mark.toString("base64")}`;
 
@@ -24,10 +24,9 @@ export default async function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1A1A1A",
         }}
       >
-        <img src={markDataUrl} alt="UMATTR" width="336" height="70" />
+        <img src={markDataUrl} alt="UMATTR" width="512" height="512" />
       </div>
     ),
     size
