@@ -103,7 +103,7 @@ export default function ConsultingPage() {
 
           <Surface compact className="fade-up lg:self-end" featured>
             <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">
-              High-trust route
+              How consulting works
             </div>
             <div className="mt-4 space-y-5">
               <div>
@@ -126,11 +126,11 @@ export default function ConsultingPage() {
               </div>
               <div>
                 <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
-                  Future billing
+                  Simple invoicing
                 </div>
                 <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
-                  Scope now, invoice later. Stripe invoice handling can slot in when
-                  the flow is ready.
+                  We confirm scope first, then send a straightforward invoice when
+                  the work is defined.
                 </p>
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function ConsultingPage() {
       <section className="mx-auto mt-16 max-w-[1200px]">
         <Surface featured className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <SectionLabel>FINAL CTA</SectionLabel>
+            <SectionLabel>REQUEST CONSULTING</SectionLabel>
             <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
               Request Consulting.
             </h2>

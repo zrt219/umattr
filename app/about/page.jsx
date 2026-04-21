@@ -8,21 +8,24 @@ import {
 export const metadata = {
   title: "About UMATTR",
   description:
-    "Learn what UMATTR is for, how the routes are structured, and how the free and paid layers fit together.",
+    "Learn what UMATTR is for, why it exists, and how the free and paid routes fit together.",
 };
 
 const points = [
   {
-    title: "What it is",
-    description: "A premium route system for learning, positioning, and consulting.",
+    title: "Brand purpose",
+    description:
+      "UMATTR helps people make clearer decisions with disciplined AI learning, stronger career direction, and cleaner next steps.",
   },
   {
-    title: "What it does",
-    description: "Moves people from free orientation into the path that fits the decision.",
+    title: "Operating model",
+    description:
+      "Free Membership stays free on UMATTR. Programs and Career Intelligence continue through Payhip, while Consulting stays inquiry-first.",
   },
   {
-    title: "How it sells",
-    description: "Programs and Career Intelligence continue through Payhip, while Consulting stays inquiry-first.",
+    title: "Customer journey",
+    description:
+      "Start free when you want orientation, then move into the route that matches the decision and the level of support required.",
   },
 ];
 
@@ -34,12 +37,13 @@ export default function AboutPage() {
         <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
           <div className="fade-up">
             <h1 className="max-w-[10ch] text-[clamp(3rem,6vw,4.75rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1A1A1A]">
-              UMATTR keeps the route clear.
+              UMATTR helps people make clearer decisions.
             </h1>
             <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
-              The brand is built to help people start free, then move into the
-              route that matches the decision: programs, career intelligence, or
-              consulting.
+              It combines disciplined AI learning, practical career direction,
+              and direct consulting into one premium route system. Start free
+              when you need orientation, then move into the path that fits the
+              decision.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
@@ -59,18 +63,20 @@ export default function AboutPage() {
 
           <Surface compact className="fade-up lg:self-end" featured>
             <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">
-              Brand shape
+              What UMATTR is for
             </div>
             <div className="mt-4 space-y-4">
               <p className="text-[15px] leading-7 text-[#6B6B6B]">
-                Calm, commercial, and clear.
+                Clear enough to trust, calm enough to use, and commercial enough
+                to support a real decision.
               </p>
               <p className="text-[15px] leading-7 text-[#6B6B6B]">
-                A route system that starts free and becomes more specific as the
-                decision gets sharper.
+                The brand is built for people who want better judgment rather than
+                more noise.
               </p>
               <p className="text-[15px] leading-7 text-[#6B6B6B]">
-                Designed to feel premium without adding noise.
+                Free tools create orientation. Paid routes handle the next level
+                of support when the decision gets sharper.
               </p>
             </div>
           </Surface>
@@ -78,9 +84,9 @@ export default function AboutPage() {
       </section>
 
       <section className="mx-auto mt-16 max-w-[1200px]">
-        <SectionLabel>WHAT MATTERS</SectionLabel>
+        <SectionLabel>HOW IT WORKS</SectionLabel>
         <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
-          Three simple truths.
+          A simple route system for different kinds of decisions.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {points.map((point) => (
@@ -97,12 +103,12 @@ export default function AboutPage() {
       <section className="mx-auto mt-16 max-w-[1200px]">
         <Surface featured className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <SectionLabel>FINAL CTA</SectionLabel>
+            <SectionLabel>NEXT STEP</SectionLabel>
             <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
-              Start free, then choose the route.
+              Start free, then choose the route that fits.
             </h2>
             <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#6B6B6B]">
-              The site stays calm when each route has a clear job.
+              UMATTR stays calm and useful when each route has a clear job.
             </p>
           </div>
           <ButtonLink

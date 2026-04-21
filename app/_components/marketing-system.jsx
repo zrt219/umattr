@@ -43,13 +43,10 @@ export const PROGRAM_DETAIL_LINKS = {
 };
 
 export const PAYHIP_LINKS = {
-  foundations: "https://payhip.com/umattr/foundations",
-  forWork: "https://payhip.com/umattr/for-work",
-  forBusiness: "https://payhip.com/umattr/for-business",
-  careerFamily: "https://payhip.com/umattr/career-intelligence",
-  careerCore: "https://payhip.com/umattr/career-intelligence/core",
-  careerPlus: "https://payhip.com/umattr/career-intelligence/plus",
-  careerPro: "https://payhip.com/umattr/career-intelligence/pro",
+  foundations: "https://payhip.com/b/FKJ7n",
+  forWork: "https://payhip.com/b/HshI4",
+  forBusiness: "https://payhip.com/b/T5xuf",
+  careerIntelligence: "https://payhip.com/b/iybAI",
 };
 
 export const FREE_TOOL_LINKS = {

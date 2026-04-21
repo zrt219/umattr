@@ -1,6 +1,7 @@
 import {
   ButtonLink,
   MarketingChrome,
+  PAYHIP_LINKS,
   SectionLabel,
   Surface,
 } from "../../_components/marketing-system.jsx";
@@ -11,7 +12,7 @@ export const metadata = {
     "A practical AI program for sharper daily output, cleaner workflows, and better work decisions.",
 };
 
-const payhipHref = "#";
+const payhipHref = PAYHIP_LINKS.forWork;
 
 const purposeCards = [
   {
@@ -114,7 +115,7 @@ export default function ForWorkPage() {
 
           <Surface compact className="fade-up lg:self-end" featured>
             <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">
-              Payhip delivery
+              How access works
             </div>
             <div className="mt-4 space-y-5">
               <div>
@@ -214,7 +215,7 @@ export default function ForWorkPage() {
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>MODULE OVERVIEW</SectionLabel>
         <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
-          Modules as summaries only.
+          Module overview.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {moduleCards.map((card) => (
@@ -236,7 +237,7 @@ export default function ForWorkPage() {
           className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
         >
           <div>
-            <SectionLabel>FINAL CTA</SectionLabel>
+            <SectionLabel>NEXT STEP</SectionLabel>
             <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
               Access AI for Work on Payhip.
             </h2>

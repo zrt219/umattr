@@ -108,7 +108,7 @@ export default function LoginPage() {
       <section className="mx-auto mt-16 max-w-[1200px]">
         <Surface featured className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
-            <SectionLabel>FINAL CTA</SectionLabel>
+            <SectionLabel>ACCESS ROUTES</SectionLabel>
             <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
               Keep the access path simple.
             </h2>

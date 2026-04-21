@@ -77,7 +77,7 @@ export default function UmattrHomepage() {
     },
     {
       eyebrow: "AI PROGRAMS",
-      title: "Foundations • Work • Business",
+      title: "Foundations / Work / Business",
       description: "Three Payhip-delivered programs.",
       cta: "Explore Programs",
       href: "/programs",
@@ -377,7 +377,7 @@ export default function UmattrHomepage() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(198,165,92,0.12),transparent_26%),radial-gradient(circle_at_88%_18%,rgba(198,165,92,0.08),transparent_22%)]" />
                 <div className="relative h-full rounded-[28px] border border-[rgba(198,165,92,0.12)] bg-white/70 p-8 md:p-10 lg:p-12">
                   <div className="max-w-[28rem]">
-                    <div className="text-[12px] font-semibold uppercase tracking-[0.32em] text-[#A8843A]">Product rail</div>
+                    <div className="text-[12px] font-semibold uppercase tracking-[0.32em] text-[#A8843A]">Programs and previews</div>
                     <div className="mt-4 text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1A1A1A] md:text-[32px] xl:text-[34px]">
                       Preview the routes.
                     </div>
