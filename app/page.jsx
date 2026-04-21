@@ -1,3 +1,5 @@
+import { BrandLogo, MAIN_CTA_LINK } from "./_components/marketing-system";
+
 export default function UmattrHomepage() {
   const navItems = [
     { label: "Home", href: "/" },
@@ -15,7 +17,7 @@ export default function UmattrHomepage() {
       description: "Assessment, glossary, dashboard, and previews.",
       bestWhen: "you want orientation before paying.",
       cta: "Start Free",
-      href: "/start",
+      href: MAIN_CTA_LINK,
       featured: true,
     },
     {
@@ -299,8 +301,8 @@ export default function UmattrHomepage() {
 
         <header className="relative z-10 mx-auto max-w-[1440px] px-6 pt-6 md:px-10 lg:px-12">
           <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(198,165,92,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
-            <a href="/" className="flex items-center gap-3 text-[28px] font-semibold tracking-[-0.04em] text-[#1A1A1A] no-underline">
-              UMATTR
+            <a href="/" className="no-underline">
+              <BrandLogo variant="inline" />
             </a>
 
             <nav className="hidden items-center gap-7 lg:flex lg:gap-8">
@@ -320,7 +322,7 @@ export default function UmattrHomepage() {
                 Login
               </a>
               <ButtonLink
-                href="/start"
+                href={MAIN_CTA_LINK}
                 className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
               >
                 Start Free
@@ -334,7 +336,7 @@ export default function UmattrHomepage() {
             <div className="fade-up glass relative overflow-hidden rounded-[30px] border border-[rgba(198,165,92,0.16)] p-8 shadow-[var(--shadow-card)] md:p-10 lg:col-span-5 lg:p-12">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,165,92,0.10),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.64),rgba(255,255,255,0.42))]" />
               <div className="relative">
-                <div className="mb-8 text-[12px] font-semibold uppercase tracking-[0.36em] text-[#A8843A]">UMATTR</div>
+                <BrandLogo variant="stacked" className="mb-8" />
                 <h1 className="max-w-[9ch] text-[clamp(3.5rem,7vw,5rem)] font-semibold leading-[0.96] tracking-[-0.055em] text-[#1A1A1A]">
                   Premium AI learning for real decisions.
                 </h1>
@@ -344,7 +346,7 @@ export default function UmattrHomepage() {
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <ButtonLink
-                    href="/start"
+              href={MAIN_CTA_LINK}
                     className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.30)]"
                   >
                     Start Free
@@ -573,9 +575,8 @@ export default function UmattrHomepage() {
         <footer className="border-t border-[rgba(168,132,58,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
           <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.08fr_1.92fr] lg:gap-14 lg:px-12 lg:py-18">
             <div className="border-b border-[rgba(198,165,92,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
-              <div className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#A8843A]">UMATTR</div>
-              <a href="/" className="mt-4 block text-[60px] font-semibold leading-none tracking-[-0.065em] text-[#C6A55C] no-underline md:text-[72px]">
-                UMATTR
+              <a href="/" className="inline-flex no-underline">
+                <BrandLogo variant="stacked" />
               </a>
               <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
                 Start free, then move into the path that fits the decision.
@@ -607,7 +608,7 @@ export default function UmattrHomepage() {
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
                   <a href="/about" className="subtle-link block">About</a>
                   <a href="/login" className="subtle-link block">Login</a>
-                  <a href="/start" className="subtle-link block">Start Free</a>
+                  <a href={MAIN_CTA_LINK} className="subtle-link block">Start Free</a>
                 </div>
               </div>
             </div>

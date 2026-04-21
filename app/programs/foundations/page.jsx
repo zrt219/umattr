@@ -1,6 +1,7 @@
 import {
   ButtonLink,
   MarketingChrome,
+  MAIN_CTA_LINK,
   PAYHIP_LINKS,
   SectionLabel,
   Surface,
@@ -106,7 +107,7 @@ export default function FoundationsPage() {
                 Next: AI for Work
               </ButtonLink>
               <ButtonLink
-                href="/start"
+                href={MAIN_CTA_LINK}
                 className="premium-button rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
               >
                 Start Free

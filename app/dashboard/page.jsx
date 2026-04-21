@@ -1,6 +1,7 @@
 import {
   ButtonLink,
   MarketingChrome,
+  MAIN_CTA_LINK,
   SectionLabel,
   Surface,
 } from "../_components/marketing-system.jsx";
@@ -44,7 +45,7 @@ export default function DashboardPage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
-                href="/start"
+                href={MAIN_CTA_LINK}
                 className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
               >
                 Back to Start Free
@@ -108,7 +109,7 @@ export default function DashboardPage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ButtonLink
-              href="/start"
+              href={MAIN_CTA_LINK}
               className="premium-button rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/88 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
             >
               Start Free

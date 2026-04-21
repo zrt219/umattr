@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const MAIN_CTA_LINK = "https://payhip.com/UMATTR";
+
 export const SITE_NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "AI Programs", href: "/programs" },
@@ -31,7 +33,7 @@ export const FOOTER_COLUMNS = [
     links: [
       { label: "About", href: "/about" },
       { label: "Login", href: "/login" },
-      { label: "Start Free", href: "/start" },
+      { label: "Start Free", href: MAIN_CTA_LINK },
     ],
   },
 ];
@@ -42,12 +44,119 @@ export const PROGRAM_DETAIL_LINKS = {
   forBusiness: "/programs/for-business",
 };
 
+export function BrandLogoMark({
+  className = "h-12 w-auto",
+  title,
+  ...props
+}) {
+  return (
+    <svg
+      viewBox="0 0 160 100"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      role={title ? "img" : undefined}
+      aria-label={title}
+      aria-hidden={title ? undefined : true}
+      focusable="false"
+      {...props}
+    >
+      {title ? <title>{title}</title> : null}
+      <BrandLogoMarkShape />
+    </svg>
+  );
+}
+
+export function BrandLogoWordmark({
+  className = "h-11 w-auto",
+  ...props
+}) {
+  return (
+    <svg
+      viewBox="0 0 520 120"
+      className={className}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+      {...props}
+    >
+      <text
+        x="0"
+        y="86"
+        fill={BRAND_GOLD}
+        fontSize="84"
+        fontWeight="900"
+        letterSpacing="-0.06em"
+        style={{
+          fontFamily:
+            '"Arial Black", "Avenir Next Condensed", "Helvetica Neue", Arial, sans-serif',
+        }}
+        textLength="480"
+        lengthAdjust="spacingAndGlyphs"
+        shapeRendering="geometricPrecision"
+      >
+        UMATTR
+      </text>
+    </svg>
+  );
+}
+
+export function BrandLogo({
+  variant = "inline",
+  className = "",
+  title = "UMATTR",
+  ...props
+}) {
+  if (variant === "icon") {
+    return <BrandLogoMark className={className} title={title} {...props} />;
+  }
+
+  if (variant === "stacked") {
+    return (
+      <div className={`inline-flex flex-col items-start gap-2 ${className}`} {...props}>
+        <BrandLogoMark className="h-12 w-auto" aria-hidden="true" />
+        <BrandLogoWordmark className="h-12 w-auto" />
+      </div>
+    );
+  }
+
+  return (
+    <div className={`inline-flex items-center gap-3 ${className}`} {...props}>
+      <BrandLogoMark className="h-10 w-auto" aria-hidden="true" />
+      <BrandLogoWordmark className="h-8 w-auto" />
+    </div>
+  );
+}
+
 export const PAYHIP_LINKS = {
   foundations: "https://payhip.com/b/FKJ7n",
   forWork: "https://payhip.com/b/HshI4",
   forBusiness: "https://payhip.com/b/T5xuf",
   careerIntelligence: "https://payhip.com/b/iybAI",
 };
+
+const BRAND_GOLD = "#C6A55C";
+const BRAND_GOLD_DEEP = "#A8843A";
+
+const BRAND_BIRD_PATH =
+  "M15 58C26 47 39 40 54 36C68 33 82 33 94 36C104 39 113 44 120 50C128 45 136 43 144 43C138 49 132 54 126 57C119 60 111 61 103 60C97 59 92 57 87 53C83 59 78 64 71 67C64 70 57 71 49 70C41 69 34 66 28 61C23 63 18 63 13 62C11 61 11 60 15 58Z";
+
+export function BrandLogoMarkShape() {
+  return (
+    <>
+      <path d={BRAND_BIRD_PATH} fill={BRAND_GOLD} />
+      <path
+        d="M58 58C68 52 79 49 92 50C88 54 83 57 77 59C72 61 66 62 59 62C55 61 55 60 58 58Z"
+        fill={BRAND_GOLD_DEEP}
+      />
+      <path
+        d="M71 66C76 68 80 72 82 76C84 80 83 84 79 87C74 90 67 90 61 87C56 84 53 81 52 77C52 73 56 69 64 67C66 66 68 66 71 66Z"
+        fill={BRAND_GOLD}
+      />
+    </>
+  );
+}
 
 export const FREE_TOOL_LINKS = {
   assessment: "/assessment",
@@ -310,9 +419,9 @@ function SiteHeader({ activeHref }) {
       <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(198,165,92,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
         <ButtonLink
           href="/"
-          className="flex items-center gap-3 text-[28px] font-semibold tracking-[-0.04em] text-[#1A1A1A] no-underline"
+          className="no-underline"
         >
-          UMATTR
+          <BrandLogo variant="inline" />
         </ButtonLink>
 
         <nav className="hidden items-center gap-7 lg:flex lg:gap-8">
@@ -339,7 +448,7 @@ function SiteHeader({ activeHref }) {
             Login
           </ButtonLink>
           <ButtonLink
-            href="/start"
+            href={MAIN_CTA_LINK}
             className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
           >
             Start Free
@@ -355,14 +464,11 @@ function SiteFooter({ footerLine = DEFAULT_FOOTER_LINE }) {
     <footer className="border-t border-[rgba(168,132,58,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.08fr_1.92fr] lg:gap-14 lg:px-12">
         <div className="border-b border-[rgba(198,165,92,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
-          <div className="text-[11px] font-semibold uppercase tracking-[0.34em] text-[#A8843A]">
-            UMATTR
-          </div>
           <ButtonLink
             href="/"
-            className="mt-4 block text-[60px] font-semibold leading-none tracking-[-0.065em] text-[#C6A55C] no-underline md:text-[72px]"
+            className="inline-flex no-underline"
           >
-            UMATTR
+            <BrandLogo variant="stacked" />
           </ButtonLink>
           <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
             {footerLine}
