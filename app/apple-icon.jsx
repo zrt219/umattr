@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
-import { BrandLogoMarkShape } from "./_components/brand-mark-shape.jsx";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 export const size = {
   width: 180,
@@ -8,7 +9,12 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function AppleIcon() {
+export default async function AppleIcon() {
+  const mark = await readFile(
+    path.join(process.cwd(), "public", "brand", "umattr-mark.png")
+  );
+  const markDataUrl = `data:image/png;base64,${mark.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -21,15 +27,7 @@ export default function AppleIcon() {
           background: "#1A1A1A",
         }}
       >
-        <svg
-          width="126"
-          height="78"
-          viewBox="0 0 160 100"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <BrandLogoMarkShape />
-        </svg>
+        <img src={markDataUrl} alt="UMATTR" width="126" height="26" />
       </div>
     ),
     size

@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
-import { BrandLogoMarkShape } from "./_components/brand-mark-shape.jsx";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 
 export const size = {
   width: 1200,
@@ -8,7 +9,12 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const logo = await readFile(
+    path.join(process.cwd(), "public", "brand", "umattr-logo.png")
+  );
+  const logoDataUrl = `data:image/png;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -43,31 +49,10 @@ export default function OpenGraphImage() {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
-              gap: 18,
+              gap: 28,
             }}
           >
-            <svg
-              width="470"
-              height="170"
-              viewBox="0 0 160 100"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <BrandLogoMarkShape />
-            </svg>
-            <div
-              style={{
-                fontSize: 92,
-                lineHeight: 0.92,
-                fontWeight: 900,
-                letterSpacing: "-0.06em",
-                color: "#C6A55C",
-                fontFamily:
-                  '"Arial Black", "Avenir Next Condensed", "Helvetica Neue", Arial, sans-serif',
-              }}
-            >
-              UMATTR
-            </div>
+            <img src={logoDataUrl} alt="UMATTR" width="520" height="180" />
           </div>
 
           <div
