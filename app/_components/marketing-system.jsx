@@ -1,24 +1,32 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-export const MAIN_CTA_LINK = "https://payhip.com/UMATTR";
+import Link from "next/link";
+import { LanguageSelector, useLocale } from "./locale-provider.jsx";
 
 export const SITE_NAV_ITEMS = [
-  { label: "Home", href: "/" },
+  { key: "common.home", fallback: "Home", href: "/" },
   { label: "AI Programs", href: "/programs" },
-  { label: "Career Intelligence", href: "/career-intelligence" },
-  { label: "Consulting", href: "/consulting" },
-  { label: "About", href: "/about" },
+  {
+    key: "products.careerIntelligence",
+    fallback: "Career Intelligence",
+    href: "/career-intelligence",
+  },
+  { key: "products.consulting", fallback: "Consulting", href: "/consulting" },
+  { key: "common.about", fallback: "About", href: "/about" },
 ];
 
 export const FOOTER_COLUMNS = [
   {
     title: "Navigation",
     links: [
-      { label: "Home", href: "/" },
+      { key: "common.home", fallback: "Home", href: "/" },
       { label: "AI Programs", href: "/programs" },
-      { label: "Career Intelligence", href: "/career-intelligence" },
-      { label: "Consulting", href: "/consulting" },
+      {
+        key: "products.careerIntelligence",
+        fallback: "Career Intelligence",
+        href: "/career-intelligence",
+      },
+      { key: "products.consulting", fallback: "Consulting", href: "/consulting" },
     ],
   },
   {
@@ -32,12 +40,37 @@ export const FOOTER_COLUMNS = [
   {
     title: "Account",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Login", href: "/login" },
-      { label: "Start Free", href: MAIN_CTA_LINK },
+      { key: "common.about", fallback: "About", href: "/about" },
+      { key: "common.login", fallback: "Login", href: "/login" },
+      { label: "Start Free", href: "/start" },
     ],
   },
 ];
+
+export const SOCIAL_LINKS = [
+  {
+    label: "TikTok",
+    href: "https://www.tiktok.com/@umattrofficial",
+    icon: "tiktok",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/umattr",
+    icon: "linkedin",
+  },
+  {
+    label: "Reddit",
+    href: "https://www.reddit.com/user/UmattrOfficial",
+    icon: "reddit",
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/@UMATTROfficial",
+    icon: "youtube",
+  },
+];
+
+export const START_FREE_HREF = "https://umattr.ca/start";
 
 export const PROGRAM_DETAIL_LINKS = {
   foundations: "/programs/foundations",
@@ -45,55 +78,14 @@ export const PROGRAM_DETAIL_LINKS = {
   forBusiness: "/programs/for-business",
 };
 
-const BRAND_LOGO_SRC = "/brand/umattr-logo.png";
-const BRAND_MARK_SRC = "/brand/umattr-mark.png";
-
-export function BrandLogo({
-  variant = "inline",
-  className = "",
-  title = "UMATTR",
-  ...props
-}) {
-  const asset =
-    variant === "icon"
-      ? {
-          src: BRAND_MARK_SRC,
-          width: 378,
-          height: 79,
-          classes: "h-8 w-auto",
-        }
-      : variant === "stacked"
-        ? {
-            src: BRAND_LOGO_SRC,
-            width: 393,
-            height: 136,
-            classes: "h-16 w-auto md:h-[4.5rem]",
-          }
-        : {
-            src: BRAND_LOGO_SRC,
-            width: 393,
-            height: 136,
-            classes: "h-10 w-auto",
-          };
-
-  return (
-    <Image
-      src={asset.src}
-      alt={title}
-      width={asset.width}
-      height={asset.height}
-      className={`${asset.classes} ${className}`.trim()}
-      priority={variant !== "icon"}
-      {...props}
-    />
-  );
-}
-
 export const PAYHIP_LINKS = {
   foundations: "https://payhip.com/b/FKJ7n",
   forWork: "https://payhip.com/b/HshI4",
   forBusiness: "https://payhip.com/b/T5xuf",
-  careerIntelligence: "https://payhip.com/b/iybAI",
+  careerFamily: "https://payhip.com/b/iybAI",
+  careerCore: "https://payhip.com/umattr/career-intelligence/core",
+  careerPlus: "https://payhip.com/umattr/career-intelligence/plus",
+  careerPro: "https://payhip.com/umattr/career-intelligence/pro",
 };
 
 export const FREE_TOOL_LINKS = {
@@ -120,10 +112,12 @@ export function ButtonLink({
   newTab = false,
   ...props
 }) {
-  if (isExternalHref(href) || href === "#") {
+  const effectiveHref = href === "/start" ? START_FREE_HREF : href;
+
+  if (isExternalHref(effectiveHref)) {
     return (
       <a
-        href={href}
+        href={effectiveHref}
         className={className}
         target={newTab ? "_blank" : undefined}
         rel={newTab ? "noreferrer" : undefined}
@@ -135,7 +129,7 @@ export function ButtonLink({
   }
 
   return (
-    <Link href={href} className={className} {...props}>
+    <Link href={effectiveHref} className={className} {...props}>
       {children}
     </Link>
   );
@@ -197,6 +191,71 @@ export function Surface({
   );
 }
 
+export function BrandBirdMark({ className = "" }) {
+  return (
+    <img
+      src="/brand/umattr-mark.png"
+      alt=""
+      aria-hidden="true"
+      className={`pointer-events-none absolute right-5 top-5 w-28 opacity-20 sm:w-36 lg:right-7 lg:top-7 lg:w-40 ${className}`}
+    />
+  );
+}
+
+function SocialIcon({ icon }) {
+  const iconClassName = "h-4 w-4";
+
+  if (icon === "tiktok") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+        <path d="M16.6 2.2c.4 2.4 1.8 4 4.1 4.3v3.4a8.1 8.1 0 0 1-4.1-1.2v6.2c0 4-2.6 6.8-6.4 6.8-3.5 0-6.1-2.3-6.1-5.6 0-3.4 2.7-5.8 6.3-5.8.4 0 .8 0 1.1.1v3.5a4 4 0 0 0-1.2-.2c-1.6 0-2.7.9-2.7 2.3s1 2.3 2.5 2.3c1.7 0 2.7-1 2.7-3V2.2h3.8Z" />
+      </svg>
+    );
+  }
+
+  if (icon === "linkedin") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+        <path d="M5.3 8.9H2.1v12.2h3.2V8.9ZM3.7 3a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8Zm17.9 10.7c0-3.3-1.8-5.1-4.5-5.1-2 0-3.1 1.1-3.6 2h-.1V8.9h-3.1v12.2h3.2v-6.4c0-1.7.8-2.9 2.4-2.9 1.5 0 2.4 1.1 2.4 2.9v6.4h3.2v-7.4Z" />
+      </svg>
+    );
+  }
+
+  if (icon === "reddit") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+        <path d="M21.7 11.7c0-1.4-1.1-2.5-2.5-2.5-.7 0-1.3.3-1.8.7-1.3-.8-3.1-1.4-5-1.5l.9-4.1 2.8.6a2 2 0 1 0 .2-1.3l-3.5-.7a.7.7 0 0 0-.8.5l-1.1 5c-2 .1-3.8.6-5.2 1.5a2.5 2.5 0 1 0-2.8 4.1v.4c0 3.3 3.7 6 8.3 6s8.3-2.7 8.3-6v-.4c.8-.4 1.2-1.2 1.2-2.3Zm-14.2 2a1.4 1.4 0 1 1 2.8 0 1.4 1.4 0 0 1-2.8 0Zm7.6 3.4c-.8.8-1.8 1.1-3 1.1s-2.2-.4-3-1.1a.6.6 0 0 1 .8-.9c.5.5 1.2.7 2.2.7s1.7-.2 2.2-.7a.6.6 0 0 1 .8.9Zm-.5-2a1.4 1.4 0 1 1 0-2.8 1.4 1.4 0 0 1 0 2.8Z" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+      <path d="M21.6 7.1a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 1.9 12c0 1.7.1 3.4.5 4.9A3 3 0 0 0 4.5 19c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1c.4-1.5.5-3.2.5-4.9s-.1-3.4-.5-4.9ZM10 15.3V8.7l5.7 3.3-5.7 3.3Z" />
+    </svg>
+  );
+}
+
+export function SocialLinks({ className = "" }) {
+  return (
+    <div className={`flex flex-wrap items-center gap-3 ${className}`}>
+      {SOCIAL_LINKS.map((link) => (
+        <a
+          key={link.label}
+          href={link.href}
+          aria-label={link.label}
+          title={link.label}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AF37]/45 text-[#D4AF37] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#E6C65C] hover:bg-[#E6C65C]/12 hover:text-[#B8962E]"
+        >
+          <SocialIcon icon={link.icon} />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 function getIsActive(href, activeHref) {
   if (!activeHref) {
     return false;
@@ -221,6 +280,19 @@ function MarketingStyles() {
         --white: #FFFFFF;
         --gold: #C6A55C;
         --gold-deep: #A8843A;
+        --gold-primary: #D4AF37;
+        --gold-hover: #E6C65C;
+        --gold-deep-hover: #B8962E;
+        --button-primary-bg: #D4AF37;
+        --button-primary-bg-hover: #E6C65C;
+        --button-primary-border: #D4AF37;
+        --button-primary-border-hover: #E6C65C;
+        --button-primary-text: #1A1A1A;
+        --button-secondary-bg: #D4AF37;
+        --button-secondary-bg-hover: #E6C65C;
+        --button-secondary-border: #D4AF37;
+        --button-secondary-border-hover: #E6C65C;
+        --button-secondary-text: #1A1A1A;
         --text-primary: #1A1A1A;
         --text-secondary: #6B6B6B;
         --border-soft: rgba(198, 165, 92, 0.16);
@@ -309,6 +381,43 @@ function MarketingStyles() {
         animation: sheen 900ms var(--ease-premium);
       }
 
+      .button-primary {
+        background: var(--button-primary-bg) !important;
+        border-color: var(--button-primary-border) !important;
+        color: var(--button-primary-text) !important;
+        box-shadow: 0 12px 30px rgba(184, 150, 46, 0.24);
+      }
+
+      .button-primary:not(:disabled):hover {
+        background: var(--button-primary-bg-hover) !important;
+        border-color: var(--button-primary-border-hover) !important;
+        color: var(--button-primary-text) !important;
+        box-shadow: 0 16px 38px rgba(184, 150, 46, 0.28);
+      }
+
+      .premium-button.button-standout {
+        border-color: var(--gold-deep-hover) !important;
+        box-shadow: 0 15px 36px rgba(184, 150, 46, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+      }
+
+      .premium-button.button-standout:not(:disabled):hover {
+        box-shadow: 0 19px 46px rgba(184, 150, 46, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.34);
+      }
+
+      .button-secondary {
+        background: var(--button-secondary-bg) !important;
+        border-color: var(--button-secondary-border) !important;
+        color: var(--button-secondary-text) !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76), 0 7px 20px rgba(33, 27, 18, 0.03);
+      }
+
+      .button-secondary:not(:disabled):hover {
+        background: var(--button-secondary-bg-hover) !important;
+        border-color: var(--button-secondary-border-hover) !important;
+        color: var(--button-secondary-text) !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 12px 28px rgba(184, 150, 46, 0.16);
+      }
+
       .premium-card:hover {
         transform: translateY(-4px);
         box-shadow: var(--shadow-hover);
@@ -352,42 +461,44 @@ function MarketingStyles() {
 }
 
 function SiteHeader({ activeHref }) {
+  const { t } = useLocale();
+
   return (
     <header className="relative z-10 mx-auto max-w-[1440px] px-6 pt-6 md:px-10 lg:px-12">
       <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(198,165,92,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
         <ButtonLink
           href="/"
-          className="no-underline"
+          className="flex items-center gap-3 no-underline"
         >
-          <BrandLogo variant="inline" />
+          <img
+            src="/brand/umattr-logo.png"
+            alt="UMATTR"
+            className="h-[34px] w-auto object-contain"
+          />
         </ButtonLink>
 
         <nav className="hidden items-center gap-7 lg:flex lg:gap-8">
           {SITE_NAV_ITEMS.map((item) => {
             const active = getIsActive(item.href, activeHref);
+            const label = item.key ? t(item.key, item.fallback) : item.label;
 
             return (
               <ButtonLink
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 className={`nav-link text-[15px] font-medium tracking-[-0.02em] ${active ? "active text-[#1A1A1A]" : "text-[#1A1A1A]/78 hover:text-[#1A1A1A]"}`}
               >
-                {item.label}
+                {label}
               </ButtonLink>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-3 md:gap-4">
+          <LanguageSelector className="w-[118px] sm:w-[148px]" />
           <ButtonLink
-            href="/login"
-            className="subtle-link hidden text-[15px] font-medium text-[#1A1A1A]/78 lg:inline-flex"
-          >
-            Login
-          </ButtonLink>
-          <ButtonLink
-            href={MAIN_CTA_LINK}
-            className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
+            href="/start"
+            className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
           >
             Start Free
           </ButtonLink>
@@ -398,19 +509,26 @@ function SiteHeader({ activeHref }) {
 }
 
 function SiteFooter({ footerLine = DEFAULT_FOOTER_LINE }) {
+  const { t } = useLocale();
+
   return (
     <footer className="border-t border-[rgba(168,132,58,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.08fr_1.92fr] lg:gap-14 lg:px-12">
         <div className="border-b border-[rgba(198,165,92,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
           <ButtonLink
             href="/"
-            className="inline-flex no-underline"
+            className="block max-w-[240px] no-underline"
           >
-            <BrandLogo variant="stacked" />
+            <img
+              src="/brand/umattr-logo.png"
+              alt="UMATTR"
+              className="h-auto w-full object-contain"
+            />
           </ButtonLink>
           <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
             {footerLine}
           </p>
+          <SocialLinks className="mt-6" />
         </div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:pl-2">
@@ -421,8 +539,20 @@ function SiteFooter({ footerLine = DEFAULT_FOOTER_LINE }) {
               </div>
               <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
                 {column.links.map((link) => (
-                  <ButtonLink key={link.label} href={link.href} className="subtle-link block">
-                    {link.label}
+                  <ButtonLink
+                    key={link.href}
+                    href={link.href}
+                    className="subtle-link block"
+                  >
+                    {link.label === "UMATTR AI Foundations"
+                      ? `UMATTR ${t("products.aiFoundations", "AI Foundations")}`
+                      : link.label === "UMATTR AI for Work"
+                        ? `UMATTR ${t("products.aiForWork", "AI for Work")}`
+                        : link.label === "UMATTR AI for Business"
+                          ? `UMATTR ${t("products.aiForBusiness", "AI for Business")}`
+                          : link.key
+                            ? t(link.key, link.fallback)
+                            : link.label}
                   </ButtonLink>
                 ))}
               </div>

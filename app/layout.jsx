@@ -1,19 +1,20 @@
 import './globals.css';
+import { Analytics } from "@vercel/analytics/next";
+import { LocaleProvider } from "./_components/locale-provider.jsx";
 
 export const metadata = {
   metadataBase: new URL('https://umattr.ca'),
   title: 'UMATTR | AI programs, career intelligence, and consulting',
-  description: 'UMATTR offers practical AI programs, career intelligence, and premium advisory to help people and businesses grow, adapt, and stay ahead.',
-  icons: {
-    icon: '/icon',
-    apple: '/apple-icon',
-  },
+  description: 'Premium UMATTR routes for free entry, AI programs, career intelligence, and consulting.'
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" dir="ltr">
+      <body>
+        <LocaleProvider>{children}</LocaleProvider>
+        <Analytics />
+      </body>
     </html>
   );
 }

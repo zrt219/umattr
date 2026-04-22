@@ -1,12 +1,25 @@
-import { BrandLogo, MAIN_CTA_LINK, PAYHIP_LINKS } from "../_components/marketing-system";
+"use client";
+
+import {
+  BrandBirdMark,
+  PAYHIP_LINKS,
+  START_FREE_HREF,
+  SocialLinks,
+} from "../_components/marketing-system";
+import { LanguageSelector, useLocale } from "../_components/locale-provider.jsx";
 
 export default function UmattrProgramsPage() {
+  const { t } = useLocale();
+
   const navItems = [
-    { label: "Home", href: "/" },
+    { label: t("common.home", "Home"), href: "/" },
     { label: "AI Programs", href: "/programs", active: true },
-    { label: "Career Intelligence", href: "/career-intelligence" },
-    { label: "Consulting", href: "/consulting" },
-    { label: "About", href: "/about" },
+    {
+      label: t("products.careerIntelligence", "Career Intelligence"),
+      href: "/career-intelligence",
+    },
+    { label: t("products.consulting", "Consulting"), href: "/consulting" },
+    { label: t("common.about", "About"), href: "/about" },
   ];
 
   const detailLinks = {
@@ -21,7 +34,7 @@ export default function UmattrProgramsPage() {
   const programs = [
     {
       eyebrow: "AI PROGRAM",
-      title: "UMATTR AI Foundations",
+      title: `UMATTR ${t("products.aiFoundations", "AI Foundations")}`,
       description:
         "Start here for clarity, fundamentals, and the right mental model before moving into practical or business-level use.",
       bestFor: "understanding what AI is, where it fits, and how to think with it cleanly.",
@@ -31,7 +44,7 @@ export default function UmattrProgramsPage() {
     },
     {
       eyebrow: "AI PROGRAM",
-      title: "UMATTR AI for Work",
+      title: `UMATTR ${t("products.aiForWork", "AI for Work")}`,
       description:
         "Use AI more effectively across day-to-day workflows where speed, clarity, and output quality matter repeatedly.",
       bestFor: "individual execution, workflow improvement, and stronger practical use inside real work.",
@@ -40,7 +53,7 @@ export default function UmattrProgramsPage() {
     },
     {
       eyebrow: "AI PROGRAM",
-      title: "UMATTR AI for Business",
+      title: `UMATTR ${t("products.aiForBusiness", "AI for Business")}`,
       description:
         "Approach higher-stakes AI decisions with more judgment when the conversation touches operations, tools, risk, or spend.",
       bestFor: "business-level decisions where the cost of weak AI judgment is materially higher.",
@@ -96,6 +109,19 @@ export default function UmattrProgramsPage() {
           --white: #FFFFFF;
           --gold: #C6A55C;
           --gold-deep: #A8843A;
+          --gold-primary: #D4AF37;
+          --gold-hover: #E6C65C;
+          --gold-deep-hover: #B8962E;
+          --button-primary-bg: #D4AF37;
+          --button-primary-bg-hover: #E6C65C;
+          --button-primary-border: #D4AF37;
+          --button-primary-border-hover: #E6C65C;
+          --button-primary-text: #1A1A1A;
+          --button-secondary-bg: #D4AF37;
+          --button-secondary-bg-hover: #E6C65C;
+          --button-secondary-border: #D4AF37;
+          --button-secondary-border-hover: #E6C65C;
+          --button-secondary-text: #1A1A1A;
           --text-primary: #1A1A1A;
           --text-secondary: #6B6B6B;
           --border-soft: rgba(198, 165, 92, 0.16);
@@ -176,6 +202,43 @@ export default function UmattrProgramsPage() {
           animation: sheen 900ms var(--ease-premium);
         }
 
+        .button-primary {
+          background: var(--button-primary-bg) !important;
+          border-color: var(--button-primary-border) !important;
+          color: var(--button-primary-text) !important;
+          box-shadow: 0 12px 30px rgba(184, 150, 46, 0.24);
+        }
+
+        .button-primary:not(:disabled):hover {
+          background: var(--button-primary-bg-hover) !important;
+          border-color: var(--button-primary-border-hover) !important;
+          color: var(--button-primary-text) !important;
+          box-shadow: 0 16px 38px rgba(184, 150, 46, 0.28);
+        }
+
+        .premium-button.button-standout {
+          border-color: var(--gold-deep-hover) !important;
+          box-shadow: 0 15px 36px rgba(184, 150, 46, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+        }
+
+        .premium-button.button-standout:not(:disabled):hover {
+          box-shadow: 0 19px 46px rgba(184, 150, 46, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.34);
+        }
+
+        .button-secondary {
+          background: var(--button-secondary-bg) !important;
+          border-color: var(--button-secondary-border) !important;
+          color: var(--button-secondary-text) !important;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76), 0 7px 20px rgba(33, 27, 18, 0.03);
+        }
+
+        .button-secondary:not(:disabled):hover {
+          background: var(--button-secondary-bg-hover) !important;
+          border-color: var(--button-secondary-border-hover) !important;
+          color: var(--button-secondary-text) !important;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 12px 28px rgba(184, 150, 46, 0.16);
+        }
+
         .premium-card:hover {
           transform: translateY(-4px);
           box-shadow: var(--shadow-hover);
@@ -222,8 +285,15 @@ export default function UmattrProgramsPage() {
 
         <header className="relative z-10 mx-auto max-w-[1440px] px-6 pt-6 md:px-10 lg:px-12">
           <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(198,165,92,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
-            <a href="/" className="no-underline">
-              <BrandLogo variant="inline" />
+            <a
+              href="/"
+              className="flex items-center gap-3 no-underline"
+            >
+              <img
+                src="/brand/umattr-logo.png"
+                alt="UMATTR"
+                className="h-[34px] w-auto object-contain"
+              />
             </a>
 
             <nav className="hidden items-center gap-7 lg:flex lg:gap-8">
@@ -239,15 +309,10 @@ export default function UmattrProgramsPage() {
             </nav>
 
             <div className="flex items-center gap-3 md:gap-4">
-              <a
-                href="/login"
-                className="subtle-link hidden text-[15px] font-medium text-[#1A1A1A]/78 lg:inline-flex"
-              >
-                Login
-              </a>
+              <LanguageSelector className="w-[118px] sm:w-[148px]" />
               <ButtonLink
-                href={MAIN_CTA_LINK}
-                className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
+                href={START_FREE_HREF}
+                className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
               >
                 Start Free
               </ButtonLink>
@@ -257,33 +322,31 @@ export default function UmattrProgramsPage() {
 
         <main className="relative z-10 mx-auto max-w-[1440px] px-6 pb-20 pt-10 md:px-10 lg:px-12 lg:pb-28 lg:pt-12">
           <section className="mx-auto max-w-[1200px]">
-            <div className="fade-up glass relative overflow-hidden rounded-[32px] border border-[rgba(198,165,92,0.16)] p-8 shadow-[var(--shadow-card)] md:p-10 lg:p-12">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,165,92,0.10),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.62),rgba(255,255,255,0.42))]" />
-              <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10">
-                <div>
-                  <div className="text-[12px] font-semibold uppercase tracking-[0.34em] text-[#A8843A]">AI PROGRAMS</div>
-                  <h1 className="mt-5 max-w-[10ch] text-[clamp(2.9rem,5.6vw,4.8rem)] font-semibold leading-[0.96] tracking-[-0.055em] text-[#1A1A1A]">
-                    Three programs. Three different decisions.
-                  </h1>
-                  <p className="mt-6 max-w-[36rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
-                    Choose the program that matches the kind of AI decision you are actually trying to make, then open the detail page for access and delivery.
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+              <div className="fade-up pt-2">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.34em] text-[#A8843A]">AI PROGRAMS</div>
+                <h1 className="mt-5 max-w-[10ch] text-[clamp(2.9rem,5.6vw,4.8rem)] font-semibold leading-[0.96] tracking-[-0.055em] text-[#1A1A1A]">
+                  Three programs. Three different decisions.
+                </h1>
+                <p className="mt-6 max-w-[36rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
+                  Choose the program that matches the kind of AI decision you are actually trying to make, then open the detail page for access and delivery.
+                </p>
+              </div>
+
+              <div className="premium-card fade-up relative min-h-[18rem] overflow-hidden rounded-[28px] border border-[rgba(184,150,46,0.28)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,246,236,0.96))] p-6 shadow-[0_30px_88px_rgba(33,27,18,0.1)] md:p-7 lg:min-h-[21rem] lg:self-end">
+                <BrandBirdMark className="-right-2 top-7 w-36 opacity-[0.16] sm:w-44 lg:-right-4 lg:top-8 lg:w-52" />
+                <div className="relative max-w-[27rem]">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">PRODUCT TRUTH</div>
+                  <p className="mt-3 text-[15px] leading-7 text-[#6B6B6B]">
+                    UMATTR frames the programs clearly. Payhip handles previews, checkout, access, and delivery.
                   </p>
                 </div>
-
-                <div className="grid gap-4 rounded-[26px] border border-[rgba(198,165,92,0.12)] bg-white/70 p-5 md:p-6">
-                  <div>
-                    <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">PRODUCT TRUTH</div>
-                    <p className="mt-3 text-[15px] leading-7 text-[#6B6B6B]">
-                      UMATTR frames the programs clearly. Payhip handles previews, checkout, access, and delivery.
-                    </p>
-                  </div>
-                  <ButtonLink
-                    href="/programs/foundations"
-                    className="premium-button self-start rounded-[16px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.20)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.26)]"
-                  >
-                    Start with Foundations
-                  </ButtonLink>
-                </div>
+                <ButtonLink
+                  href="/programs/foundations"
+                  className="premium-button button-primary relative mt-8 w-full rounded-[16px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.20)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.26)] lg:mt-12"
+                >
+                  Start with Foundations
+                </ButtonLink>
               </div>
             </div>
           </section>
@@ -316,13 +379,13 @@ export default function UmattrProgramsPage() {
                       <div className="mt-5 flex flex-wrap gap-3">
                         <ButtonLink
                           href={program.detailHref}
-                          className="premium-button rounded-[15px] border border-[rgba(198,165,92,0.18)] bg-white/90 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.30)] hover:bg-white"
+                          className="premium-button button-secondary rounded-[15px] border border-[rgba(198,165,92,0.18)] bg-white/90 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.30)] hover:bg-white"
                         >
                           View Program
                         </ButtonLink>
                         <ButtonLink
                           href={program.payhipHref}
-                          className="premium-button rounded-[15px] border border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.24)]"
+                          className="premium-button button-primary rounded-[15px] border border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.24)]"
                         >
                           Access on Payhip
                         </ButtonLink>
@@ -371,7 +434,7 @@ export default function UmattrProgramsPage() {
                         <div className="mt-5">
                           <ButtonLink
                             href={preview.href}
-                            className="premium-button rounded-[14px] border border-[rgba(198,165,92,0.22)] bg-white/88 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] shadow-[0_6px_18px_rgba(33,27,18,0.03)] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
+                            className="premium-button button-secondary rounded-[14px] border border-[rgba(198,165,92,0.22)] bg-white/88 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] shadow-[0_6px_18px_rgba(33,27,18,0.03)] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
                           >
                             Open Preview
                           </ButtonLink>
@@ -394,7 +457,7 @@ export default function UmattrProgramsPage() {
               </div>
               <ButtonLink
                 href="/programs/foundations"
-                className="premium-button shrink-0 self-start rounded-[14px] border border-[rgba(198,165,92,0.18)] bg-white/90 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
+                className="premium-button button-secondary shrink-0 self-start rounded-[14px] border border-[rgba(198,165,92,0.18)] bg-white/90 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
               >
                 View Foundations
               </ButtonLink>
@@ -405,12 +468,20 @@ export default function UmattrProgramsPage() {
         <footer className="border-t border-[rgba(168,132,58,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
           <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.08fr_1.92fr] lg:gap-14 lg:px-12">
             <div className="border-b border-[rgba(198,165,92,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
-              <a href="/" className="inline-flex no-underline">
-                <BrandLogo variant="stacked" />
+              <a
+                href="/"
+                className="block max-w-[240px] no-underline"
+              >
+                <img
+                  src="/brand/umattr-logo.png"
+                  alt="UMATTR"
+                  className="h-auto w-full object-contain"
+                />
               </a>
               <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
                 Start free, then move into the path that fits the decision.
               </p>
+              <SocialLinks className="mt-6" />
             </div>
 
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:pl-2">
@@ -418,16 +489,16 @@ export default function UmattrProgramsPage() {
                 <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">NAVIGATION</div>
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
                   <a href="/" className="subtle-link block">
-                    Home
+                    {t("common.home", "Home")}
                   </a>
                   <a href="/programs" className="subtle-link block">
                     AI Programs
                   </a>
                   <a href="/career-intelligence" className="subtle-link block">
-                    Career Intelligence
+                    {t("products.careerIntelligence", "Career Intelligence")}
                   </a>
                   <a href="/consulting" className="subtle-link block">
-                    Consulting
+                    {t("products.consulting", "Consulting")}
                   </a>
                 </div>
               </div>
@@ -436,13 +507,13 @@ export default function UmattrProgramsPage() {
                 <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">PROGRAMS</div>
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
                   <a href="/programs/foundations" className="subtle-link block">
-                    UMATTR AI Foundations
+                    UMATTR {t("products.aiFoundations", "AI Foundations")}
                   </a>
                   <a href="/programs/for-work" className="subtle-link block">
-                    UMATTR AI for Work
+                    UMATTR {t("products.aiForWork", "AI for Work")}
                   </a>
                   <a href="/programs/for-business" className="subtle-link block">
-                    UMATTR AI for Business
+                    UMATTR {t("products.aiForBusiness", "AI for Business")}
                   </a>
                 </div>
               </div>
@@ -451,12 +522,12 @@ export default function UmattrProgramsPage() {
                 <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">ACCOUNT</div>
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
                   <a href="/about" className="subtle-link block">
-                    About
+                    {t("common.about", "About")}
                   </a>
                   <a href="/login" className="subtle-link block">
-                    Login
+                    {t("common.login", "Login")}
                   </a>
-                  <a href={MAIN_CTA_LINK} className="subtle-link block">
+                  <a href={START_FREE_HREF} className="subtle-link block">
                     Start Free
                   </a>
                 </div>

@@ -1,12 +1,22 @@
-import { BrandLogo, MAIN_CTA_LINK } from "./_components/marketing-system";
+"use client";
+
+import { SocialLinks } from "./_components/marketing-system";
+import { LanguageSelector, useLocale } from "./_components/locale-provider.jsx";
+
+const START_FREE_HREF = "https://umattr.ca/start";
 
 export default function UmattrHomepage() {
+  const { t } = useLocale();
+
   const navItems = [
-    { label: "Home", href: "/" },
+    { label: t("common.home", "Home"), href: "/" },
     { label: "AI Programs", href: "/programs" },
-    { label: "Career Intelligence", href: "/career-intelligence" },
-    { label: "Consulting", href: "/consulting" },
-    { label: "About", href: "/about" },
+    {
+      label: t("products.careerIntelligence", "Career Intelligence"),
+      href: "/career-intelligence",
+    },
+    { label: t("products.consulting", "Consulting"), href: "/consulting" },
+    { label: t("common.about", "About"), href: "/about" },
   ];
 
   const productCards = [
@@ -17,13 +27,13 @@ export default function UmattrHomepage() {
       description: "Assessment, glossary, dashboard, and previews.",
       bestWhen: "you want orientation before paying.",
       cta: "Start Free",
-      href: MAIN_CTA_LINK,
+      href: START_FREE_HREF,
       featured: true,
     },
     {
       type: "program",
       eyebrow: "AI PROGRAM",
-      title: "UMATTR AI Foundations",
+      title: `UMATTR ${t("products.aiFoundations", "AI Foundations")}`,
       description: "Start here for clarity and fundamentals.",
       bestWhen: "you need the right mental model first.",
       cta: "View Program",
@@ -32,7 +42,7 @@ export default function UmattrHomepage() {
     {
       type: "program",
       eyebrow: "AI PROGRAM",
-      title: "UMATTR AI for Work",
+      title: `UMATTR ${t("products.aiForWork", "AI for Work")}`,
       description: "Practical AI for day-to-day workflows.",
       bestWhen: "work speed and quality matter daily.",
       cta: "View Program",
@@ -41,7 +51,7 @@ export default function UmattrHomepage() {
     {
       type: "program",
       eyebrow: "AI PROGRAM",
-      title: "UMATTR AI for Business",
+      title: `UMATTR ${t("products.aiForBusiness", "AI for Business")}`,
       description: "AI judgment for higher-stakes decisions.",
       bestWhen: "the decision affects operations, vendors, or risk.",
       cta: "View Program",
@@ -50,19 +60,19 @@ export default function UmattrHomepage() {
     {
       type: "career",
       eyebrow: "CAREER INTELLIGENCE",
-      title: "Career Intelligence",
-      description: "Three package levels for direction and positioning.",
+      title: t("products.careerIntelligence", "Career Intelligence"),
+      description: "One premium route for direction and positioning.",
       bestWhen: "you need structured career clarity.",
-      cta: "Explore Career Intelligence",
+      cta: `Explore ${t("products.careerIntelligence", "Career Intelligence")}`,
       href: "/career-intelligence",
     },
     {
       type: "consulting",
       eyebrow: "CONSULTING",
-      title: "Consulting",
+      title: t("products.consulting", "Consulting"),
       description: "Human-guided decisions for systems, spend, operations, and risk.",
       bestWhen: "the call changes systems, money, operations, or exposure.",
-      cta: "Request Consulting",
+      cta: `Request ${t("products.consulting", "Consulting")}`,
       href: "/consulting",
       consulting: true,
     },
@@ -74,28 +84,28 @@ export default function UmattrHomepage() {
       title: "Free Membership",
       description: "Assessment, glossary, dashboard, previews.",
       cta: "Start Free",
-      href: "/start",
+      href: START_FREE_HREF,
       featured: true,
     },
     {
       eyebrow: "AI PROGRAMS",
-      title: "Foundations / Work / Business",
+      title: "Foundations • Work • Business",
       description: "Three Payhip-delivered programs.",
       cta: "Explore Programs",
       href: "/programs",
     },
     {
       eyebrow: "CAREER INTELLIGENCE",
-      title: "Career Intelligence",
-      description: "Direction through three package levels.",
-      cta: "Explore Career Intelligence",
+      title: t("products.careerIntelligence", "Career Intelligence"),
+      description: "Direction through one premium route.",
+      cta: `Explore ${t("products.careerIntelligence", "Career Intelligence")}`,
       href: "/career-intelligence",
     },
     {
       eyebrow: "CONSULTING",
-      title: "Consulting",
+      title: t("products.consulting", "Consulting"),
       description: "Human-guided route for higher-stakes calls.",
-      cta: "Request Consulting",
+      cta: `Request ${t("products.consulting", "Consulting")}`,
       href: "/consulting",
       consulting: true,
     },
@@ -133,25 +143,25 @@ export default function UmattrHomepage() {
       shell:
         "border-[rgba(198,165,92,0.14)] bg-white/88 shadow-[0_16px_40px_rgba(33,27,18,0.05)]",
       button:
-        "border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.24)]",
+        "button-primary border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.24)]",
     },
     program: {
       shell:
         "border-[rgba(198,165,92,0.18)] bg-white/92 shadow-[0_18px_44px_rgba(33,27,18,0.06)]",
       button:
-        "border-[rgba(198,165,92,0.18)] bg-white text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.3)]",
+        "button-secondary button-standout border-[rgba(198,165,92,0.18)] bg-white text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.3)]",
     },
     career: {
       shell:
         "border-[rgba(198,165,92,0.24)] bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(250,247,240,0.95))] shadow-[0_20px_54px_rgba(33,27,18,0.08)]",
       button:
-        "border-[rgba(198,165,92,0.18)] bg-white text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.3)]",
+        "button-secondary border-[rgba(198,165,92,0.18)] bg-white text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.3)]",
     },
     consulting: {
       shell:
         "border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(250,246,238,0.96))] shadow-[0_28px_80px_rgba(168,132,58,0.16)]",
       button:
-        "border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] text-[#1A1A1A] shadow-[0_12px_30px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_16px_38px_rgba(198,165,92,0.28)]",
+        "button-primary button-standout border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] text-[#1A1A1A] shadow-[0_12px_30px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_16px_38px_rgba(198,165,92,0.28)]",
     },
   };
 
@@ -175,6 +185,19 @@ export default function UmattrHomepage() {
           --white: #FFFFFF;
           --gold: #C6A55C;
           --gold-deep: #A8843A;
+          --gold-primary: #D4AF37;
+          --gold-hover: #E6C65C;
+          --gold-deep-hover: #B8962E;
+          --button-primary-bg: #D4AF37;
+          --button-primary-bg-hover: #E6C65C;
+          --button-primary-border: #D4AF37;
+          --button-primary-border-hover: #E6C65C;
+          --button-primary-text: #1A1A1A;
+          --button-secondary-bg: #D4AF37;
+          --button-secondary-bg-hover: #E6C65C;
+          --button-secondary-border: #D4AF37;
+          --button-secondary-border-hover: #E6C65C;
+          --button-secondary-text: #1A1A1A;
           --text-primary: #1A1A1A;
           --text-secondary: #6B6B6B;
           --border-soft: rgba(198, 165, 92, 0.18);
@@ -255,6 +278,43 @@ export default function UmattrHomepage() {
           animation: sheen 900ms var(--ease-premium);
         }
 
+        .button-primary {
+          background: var(--button-primary-bg) !important;
+          border-color: var(--button-primary-border) !important;
+          color: var(--button-primary-text) !important;
+          box-shadow: 0 12px 30px rgba(184, 150, 46, 0.24);
+        }
+
+        .button-primary:not(:disabled):hover {
+          background: var(--button-primary-bg-hover) !important;
+          border-color: var(--button-primary-border-hover) !important;
+          color: var(--button-primary-text) !important;
+          box-shadow: 0 16px 38px rgba(184, 150, 46, 0.28);
+        }
+
+        .premium-button.button-standout {
+          border-color: var(--gold-deep-hover) !important;
+          box-shadow: 0 15px 36px rgba(184, 150, 46, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+        }
+
+        .premium-button.button-standout:not(:disabled):hover {
+          box-shadow: 0 19px 46px rgba(184, 150, 46, 0.36), inset 0 1px 0 rgba(255, 255, 255, 0.34);
+        }
+
+        .button-secondary {
+          background: var(--button-secondary-bg) !important;
+          border-color: var(--button-secondary-border) !important;
+          color: var(--button-secondary-text) !important;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76), 0 7px 20px rgba(33, 27, 18, 0.03);
+        }
+
+        .button-secondary:not(:disabled):hover {
+          background: var(--button-secondary-bg-hover) !important;
+          border-color: var(--button-secondary-border-hover) !important;
+          color: var(--button-secondary-text) !important;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 12px 28px rgba(184, 150, 46, 0.16);
+        }
+
         .premium-card:hover {
           transform: translateY(-4px);
           box-shadow: var(--shadow-hover);
@@ -301,8 +361,12 @@ export default function UmattrHomepage() {
 
         <header className="relative z-10 mx-auto max-w-[1440px] px-6 pt-6 md:px-10 lg:px-12">
           <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(198,165,92,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
-            <a href="/" className="no-underline">
-              <BrandLogo variant="inline" />
+            <a href="/" className="flex items-center gap-3 no-underline">
+              <img
+                src="/brand/umattr-logo.png"
+                alt="UMATTR"
+                className="h-[34px] w-auto object-contain"
+              />
             </a>
 
             <nav className="hidden items-center gap-7 lg:flex lg:gap-8">
@@ -318,12 +382,10 @@ export default function UmattrHomepage() {
             </nav>
 
             <div className="flex items-center gap-3 md:gap-4">
-              <a href="/login" className="subtle-link hidden text-[15px] font-medium text-[#1A1A1A]/78 lg:inline-flex">
-                Login
-              </a>
+              <LanguageSelector className="w-[118px] sm:w-[148px]" />
               <ButtonLink
-                href={MAIN_CTA_LINK}
-                className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
+                href={START_FREE_HREF}
+                className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
               >
                 Start Free
               </ButtonLink>
@@ -336,37 +398,43 @@ export default function UmattrHomepage() {
             <div className="fade-up glass relative overflow-hidden rounded-[30px] border border-[rgba(198,165,92,0.16)] p-8 shadow-[var(--shadow-card)] md:p-10 lg:col-span-5 lg:p-12">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(198,165,92,0.10),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.64),rgba(255,255,255,0.42))]" />
               <div className="relative">
-                <BrandLogo variant="stacked" className="mb-8" />
+                <div className="mb-10 flex justify-center">
+                  <img
+                    src="/brand/umattr-logo.png"
+                    alt="UMATTR"
+                    className="h-auto w-[218px] object-contain md:w-[248px]"
+                  />
+                </div>
                 <h1 className="max-w-[9ch] text-[clamp(3.5rem,7vw,5rem)] font-semibold leading-[0.96] tracking-[-0.055em] text-[#1A1A1A]">
                   Premium AI learning for real decisions.
                 </h1>
                 <p className="mt-8 max-w-[34rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
-                  Start free on UMATTR. AI Programs and Career Intelligence continue through Payhip. Consulting is requested directly.
+                  Start free on UMATTR. AI Programs and {t("products.careerIntelligence", "Career Intelligence")} continue through Payhip. {t("products.consulting", "Consulting")} is requested directly.
                 </p>
 
                 <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                   <ButtonLink
-              href={MAIN_CTA_LINK}
-                    className="premium-button rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.30)]"
+                    href={START_FREE_HREF}
+                    className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.30)]"
                   >
                     Start Free
                   </ButtonLink>
                   <ButtonLink
                     href="/programs"
-                    className="premium-button rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/70 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                    className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/70 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
                   >
                     Explore AI Programs
                   </ButtonLink>
                   <ButtonLink
                     href="/career-intelligence"
-                    className="premium-button rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/70 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                    className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/70 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
                   >
-                    Explore Career Intelligence
+                    Explore {t("products.careerIntelligence", "Career Intelligence")}
                   </ButtonLink>
                 </div>
 
                 <p className="mt-10 text-[14px] leading-7 text-[#6B6B6B]">
-                  Free tools live on UMATTR. Previews, checkout, and delivery for AI Programs and Career Intelligence happen on Payhip.
+                  Free tools live on UMATTR. Previews, checkout, and delivery for AI Programs and {t("products.careerIntelligence", "Career Intelligence")} happen on Payhip.
                 </p>
               </div>
             </div>
@@ -379,12 +447,12 @@ export default function UmattrHomepage() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(198,165,92,0.12),transparent_26%),radial-gradient(circle_at_88%_18%,rgba(198,165,92,0.08),transparent_22%)]" />
                 <div className="relative h-full rounded-[28px] border border-[rgba(198,165,92,0.12)] bg-white/70 p-8 md:p-10 lg:p-12">
                   <div className="max-w-[28rem]">
-                    <div className="text-[12px] font-semibold uppercase tracking-[0.32em] text-[#A8843A]">Programs and previews</div>
+                    <div className="text-[12px] font-semibold uppercase tracking-[0.32em] text-[#A8843A]">Product rail</div>
                     <div className="mt-4 text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1A1A1A] md:text-[32px] xl:text-[34px]">
                       Preview the routes.
                     </div>
                     <p className="mt-4 max-w-[25rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px]">
-                      Free, AI Programs, Career Intelligence, and Consulting.
+                      Free, AI Programs, {t("products.careerIntelligence", "Career Intelligence")}, and {t("products.consulting", "Consulting")}.
                     </p>
                   </div>
 
@@ -411,7 +479,7 @@ export default function UmattrHomepage() {
 
                           <ButtonLink
                             href={item.href}
-                            className={`premium-button shrink-0 self-start rounded-[15px] border px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] ${item.featured || item.consulting ? "border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.20)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.26)]" : "border-[rgba(198,165,92,0.18)] bg-white/86 text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.30)] hover:bg-white"}`}
+                            className={`premium-button shrink-0 self-start rounded-[15px] border px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] ${item.featured || item.consulting ? `button-primary${item.consulting ? " button-standout" : ""} border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.20)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.26)]` : `button-secondary${item.eyebrow === "CAREER INTELLIGENCE" ? " button-standout" : ""} border-[rgba(198,165,92,0.18)] bg-white/86 text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.30)] hover:bg-white`}`}
                           >
                             {item.cta}
                           </ButtonLink>
@@ -444,10 +512,10 @@ export default function UmattrHomepage() {
                     <span className="font-semibold text-[#1A1A1A]">Start Free</span> for context first.
                   </p>
                   <p>
-                    <span className="font-semibold text-[#1A1A1A]">AI Programs and Career Intelligence</span> are Payhip-delivered paths.
+                    <span className="font-semibold text-[#1A1A1A]">AI Programs and {t("products.careerIntelligence", "Career Intelligence")}</span> are Payhip-delivered paths.
                   </p>
                   <p>
-                    <span className="font-semibold text-[#1A1A1A]">Consulting</span> is the direct premium route for higher-stakes calls.
+                    <span className="font-semibold text-[#1A1A1A]">{t("products.consulting", "Consulting")}</span> is the direct premium route for higher-stakes calls.
                   </p>
                 </div>
               </div>
@@ -514,9 +582,9 @@ export default function UmattrHomepage() {
               </div>
               <ButtonLink
                 href="/consulting"
-                className="premium-button shrink-0 self-start rounded-[14px] border border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] shadow-[0_8px_20px_rgba(198,165,92,0.16)] hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(198,165,92,0.22)] md:self-center"
+                className="premium-button button-primary shrink-0 self-start rounded-[14px] border border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] shadow-[0_8px_20px_rgba(198,165,92,0.16)] hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(198,165,92,0.22)] md:self-center"
               >
-                Request Consulting
+                Request {t("products.consulting", "Consulting")}
               </ButtonLink>
             </div>
           </section>
@@ -558,7 +626,7 @@ export default function UmattrHomepage() {
                         <div className="mt-5">
                           <ButtonLink
                             href={card.href}
-                            className="premium-button rounded-[14px] border border-[rgba(198,165,92,0.22)] bg-white/88 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] shadow-[0_6px_18px_rgba(33,27,18,0.03)] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
+                            className="premium-button button-secondary rounded-[14px] border border-[rgba(198,165,92,0.22)] bg-white/88 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] shadow-[0_6px_18px_rgba(33,27,18,0.03)] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
                           >
                             {card.cta}
                           </ButtonLink>
@@ -575,40 +643,45 @@ export default function UmattrHomepage() {
         <footer className="border-t border-[rgba(168,132,58,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
           <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.08fr_1.92fr] lg:gap-14 lg:px-12 lg:py-18">
             <div className="border-b border-[rgba(198,165,92,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
-              <a href="/" className="inline-flex no-underline">
-                <BrandLogo variant="stacked" />
+              <a href="/" className="block max-w-[240px] no-underline">
+                <img
+                  src="/brand/umattr-logo.png"
+                  alt="UMATTR"
+                  className="h-auto w-full object-contain"
+                />
               </a>
               <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
                 Start free, then move into the path that fits the decision.
               </p>
+              <SocialLinks className="mt-6" />
             </div>
 
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:pl-2">
               <div>
                 <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">NAVIGATION</div>
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
-                  <a href="/" className="subtle-link block">Home</a>
+                  <a href="/" className="subtle-link block">{t("common.home", "Home")}</a>
                   <a href="/programs" className="subtle-link block">AI Programs</a>
-                  <a href="/career-intelligence" className="subtle-link block">Career Intelligence</a>
-                  <a href="/consulting" className="subtle-link block">Consulting</a>
+                  <a href="/career-intelligence" className="subtle-link block">{t("products.careerIntelligence", "Career Intelligence")}</a>
+                  <a href="/consulting" className="subtle-link block">{t("products.consulting", "Consulting")}</a>
                 </div>
               </div>
 
               <div>
                 <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">PROGRAMS</div>
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
-                  <a href="/programs/foundations" className="subtle-link block">UMATTR AI Foundations</a>
-                  <a href="/programs/for-work" className="subtle-link block">UMATTR AI for Work</a>
-                  <a href="/programs/for-business" className="subtle-link block">UMATTR AI for Business</a>
+                  <a href="/programs/foundations" className="subtle-link block">UMATTR {t("products.aiFoundations", "AI Foundations")}</a>
+                  <a href="/programs/for-work" className="subtle-link block">UMATTR {t("products.aiForWork", "AI for Work")}</a>
+                  <a href="/programs/for-business" className="subtle-link block">UMATTR {t("products.aiForBusiness", "AI for Business")}</a>
                 </div>
               </div>
 
               <div>
                 <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">ACCOUNT</div>
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
-                  <a href="/about" className="subtle-link block">About</a>
-                  <a href="/login" className="subtle-link block">Login</a>
-                  <a href={MAIN_CTA_LINK} className="subtle-link block">Start Free</a>
+                  <a href="/about" className="subtle-link block">{t("common.about", "About")}</a>
+                  <a href="/login" className="subtle-link block">{t("common.login", "Login")}</a>
+                  <a href={START_FREE_HREF} className="subtle-link block">Start Free</a>
                 </div>
               </div>
             </div>
