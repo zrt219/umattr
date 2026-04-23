@@ -1,5 +1,6 @@
 import './globals.css';
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { LocaleProvider } from "./_components/locale-provider.jsx";
 
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body>
         <LocaleProvider>{children}</LocaleProvider>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
