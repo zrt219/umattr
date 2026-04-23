@@ -21,6 +21,6 @@ This package now includes the core public routes for the UMATTR site:
 3. Run `npm run dev` locally or push to Vercel
 
 ## Route notes
-- Program and career routes use live Payhip product links.
+- Program and career package routes use placeholder Payhip destinations for launch.
 - Consulting uses an inquiry-first mailto flow for now.
 - Free entry routes are public utility pages that connect the site together without fake gated content.

@@ -114,6 +114,36 @@ export function LanguageSelector({ className = "" }) {
   );
 }
 
+export function GTranslateWidget({ className = "" }) {
+  useEffect(() => {
+    window.gtranslateSettings = {
+      default_language: "en",
+      native_language_names: true,
+      wrapper_selector: ".gtranslate_wrapper",
+    };
+
+    if (document.querySelector("script[data-umattr-gtranslate]")) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+    script.async = true;
+    script.defer = true;
+    script.dataset.umattrGtranslate = "true";
+    document.body.appendChild(script);
+  }, []);
+
+  return (
+    <div
+      className={`gtranslate-shell h-[46px] w-[132px] overflow-hidden rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/82 px-3 text-[13px] font-medium text-[#1A1A1A] shadow-[0_7px_20px_rgba(33,27,18,0.03)] transition-all duration-200 hover:border-[rgba(198,165,92,0.32)] sm:w-[158px] ${className}`}
+      aria-label="Translate website"
+    >
+      <div className="gtranslate_wrapper" />
+    </div>
+  );
+}
+
 export function LocalizedText({ translationKey, fallback, prefix = "", suffix = "" }) {
   const { t } = useLocale();
   return (

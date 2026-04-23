@@ -1,7 +1,7 @@
 "use client";
 
 import { SocialLinks } from "./_components/marketing-system";
-import { LanguageSelector, useLocale } from "./_components/locale-provider.jsx";
+import { GTranslateWidget, useLocale } from "./_components/locale-provider.jsx";
 
 const START_FREE_HREF = "https://umattr.ca/start";
 
@@ -353,6 +353,34 @@ export default function UmattrHomepage() {
         .subtle-link:hover {
           color: var(--text-primary);
         }
+
+        .gtranslate-shell {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .gtranslate-shell .gtranslate_wrapper,
+        .gtranslate-shell select {
+          width: 100%;
+        }
+
+        .gtranslate-shell select {
+          height: 44px;
+          border: 0 !important;
+          background: transparent !important;
+          color: #1A1A1A !important;
+          font-family: inherit !important;
+          font-size: 13px !important;
+          font-weight: 600 !important;
+          letter-spacing: -0.02em !important;
+          outline: none !important;
+          cursor: pointer;
+        }
+
+        .gtranslate-shell select option {
+          color: #1A1A1A;
+        }
       `}</style>
 
       <div className="relative overflow-hidden noise">
@@ -382,7 +410,7 @@ export default function UmattrHomepage() {
             </nav>
 
             <div className="flex items-center gap-3 md:gap-4">
-              <LanguageSelector className="w-[118px] sm:w-[148px]" />
+              <GTranslateWidget />
               <ButtonLink
                 href={START_FREE_HREF}
                 className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
