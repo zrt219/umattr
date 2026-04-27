@@ -63,6 +63,24 @@ const futurePoints = [
   },
 ];
 
+const behindSignals = [
+  {
+    title: "Built from lived attention",
+    description:
+      "The work is grounded in close observation of what people are actually struggling to interpret and act on.",
+  },
+  {
+    title: "Designed for real transitions",
+    description:
+      "UMATTR is for people in motion: learning, repositioning, rebuilding, or trying to move with more intention.",
+  },
+  {
+    title: "Made to help people move with more confidence",
+    description:
+      "The goal is not more noise. It is stronger judgment, clearer choices, and steadier momentum.",
+  },
+];
+
 export default function AboutPage() {
   return (
     <MarketingChrome activeHref="/">
@@ -82,13 +100,13 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
                 href="/start"
-                className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+                className="premium-button button-primary min-h-[56px] rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-0 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)] sm:min-w-[11.75rem]"
               >
                 Start Free
               </ButtonLink>
               <ButtonLink
                 href="/programs"
-                className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                className="premium-button button-secondary min-h-[56px] rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-0 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white sm:min-w-[11.75rem]"
               >
                 View Programs
               </ButtonLink>
@@ -147,6 +165,61 @@ export default function AboutPage() {
               <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{point.description}</p>
             </Surface>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-[1200px]">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
+          <div>
+            <SectionLabel>WHO IS BEHIND UMATTR</SectionLabel>
+            <h2 className="mt-4 max-w-[13ch] text-[clamp(2.15rem,3.2vw,3.2rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+              UMATTR is being built by someone paying close attention.
+            </h2>
+            <div className="mt-5 max-w-[39rem] space-y-5 text-[16px] leading-8 text-[#6B6B6B] md:text-[17px]">
+              <p>
+                Behind UMATTR is a person watching how AI is changing work,
+                confidence, and opportunity for ordinary ambitious people who do
+                not have time to waste on noise.
+              </p>
+              <p>
+                The project comes from a real belief that people need more than
+                information right now. They need clarity, better judgment, and
+                a calmer way to choose what matters next.
+              </p>
+              <p>
+                UMATTR is being shaped as a practical route system with care,
+                restraint, and respect for people trying to adapt well in
+                public, in private, and under pressure.
+              </p>
+            </div>
+            <p className="mt-6 max-w-[34rem] text-[13px] font-semibold uppercase tracking-[0.16em] text-[#8A7A58]">
+              That is why the work stays focused on direction, not just content.
+            </p>
+          </div>
+
+          <Surface
+            featured
+            className="border-[rgba(184,150,46,0.28)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,246,236,0.96))] shadow-[0_30px_88px_rgba(33,27,18,0.1)]"
+          >
+            <div className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+              What shapes the work
+            </div>
+            <div className="mt-6 space-y-5">
+              {behindSignals.map((signal, index) => (
+                <div
+                  key={signal.title}
+                  className={index > 0 ? "border-t border-[rgba(198,165,92,0.12)] pt-5" : ""}
+                >
+                  <h3 className="text-[21px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+                    {signal.title}
+                  </h3>
+                  <p className="mt-3 max-w-[31rem] text-[15px] leading-7 text-[#5F5F5F]">
+                    {signal.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Surface>
         </div>
       </section>
 

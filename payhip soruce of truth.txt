@@ -1,0 +1,16 @@
+UMATTR Payhip source of truth
+
+Paid programs:
+- UMATTR AI Foundations: https://payhip.com/b/FKJ7n
+- UMATTR AI for Work: https://payhip.com/b/HshI4
+- UMATTR AI for Business: https://payhip.com/b/T5xuf
+- UMATTR Career Intelligence: https://payhip.com/b/iybAI
+
+Free/sample products:
+- Sample Foundations: https://payhip.com/b/gNCTO
+
+Implementation note:
+- Runtime links should be centralized in lib/umattr-links.js.
+- app/_components/marketing-system.jsx may re-export those links for client components.
+- The paid Foundations access buttons should use the paid Foundations URL.
+- Free/sample Foundations preview links should use the Sample Foundations URL.

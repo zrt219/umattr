@@ -2,12 +2,11 @@ import {
   BrandBirdMark,
   ButtonLink,
   MarketingChrome,
-  PAYHIP_LINKS,
-  PROGRAM_DETAIL_LINKS,
   SectionLabel,
   Surface,
 } from "../../_components/marketing-system.jsx";
 import { LocalizedText } from "../../_components/locale-provider.jsx";
+import { PAYHIP_LINKS, PROGRAM_DETAIL_LINKS } from "../../../lib/umattr-links.js";
 
 export const metadata = {
   title: "UMATTR AI for Work",
@@ -68,6 +67,40 @@ const moduleCards = [
   },
 ];
 
+const formatCards = [
+  {
+    title: "Level",
+    description: "Best after Foundations, or for people already comfortable with basic AI use.",
+  },
+  {
+    title: "Format",
+    description: "Self-paced digital access through Payhip, built around practical work habits.",
+  },
+  {
+    title: "What you get",
+    description: "Workflow prompts, drafting patterns, review habits, and cleaner reusable outputs.",
+  },
+];
+
+const faqItems = [
+  {
+    question: "Who is this for?",
+    answer: "People who want AI to improve daily work without making the output feel careless or generic.",
+  },
+  {
+    question: "Do I need Foundations first?",
+    answer: "Foundations helps if you want the model first. AI for Work is stronger when you already know the basics.",
+  },
+  {
+    question: "What happens after purchase?",
+    answer: "Payhip handles secure checkout and delivery. UMATTR provides the program structure and route guidance.",
+  },
+  {
+    question: "When should I choose Business instead?",
+    answer: "Choose Business when the decision touches tools, vendors, spend, operations, or risk.",
+  },
+];
+
 export default function ForWorkPage() {
   return (
     <MarketingChrome activeHref="/programs">
@@ -114,8 +147,7 @@ export default function ForWorkPage() {
             </div>
 
             <p className="mt-8 max-w-[34rem] text-[14px] leading-7 text-[#6B6B6B]">
-              UMATTR frames the program. Payhip handles preview access, checkout,
-              and delivery.
+              UMATTR frames the program. Payhip handles secure checkout and delivery when you are ready.
             </p>
           </div>
 
@@ -236,6 +268,41 @@ export default function ForWorkPage() {
       </section>
 
       <section className="mx-auto mt-16 max-w-[1200px]">
+        <SectionLabel>FORMAT / TIMELINE</SectionLabel>
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+          Practical enough to use inside the week.
+        </h2>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+          {formatCards.map((card, index) => (
+            <Surface key={card.title} compact featured={index === 0} className={index === 0 ? "priority-high" : "priority-medium"}>
+              <span className="priority-badge">{index === 0 ? "FIX NOW" : "IMPROVE NEXT"}</span>
+              <h3 className="mt-5 text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+                {card.title}
+              </h3>
+              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{card.description}</p>
+            </Surface>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-[1200px]">
+        <SectionLabel>FAQ</SectionLabel>
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+          Questions before access.
+        </h2>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          {faqItems.map((item) => (
+            <Surface key={item.question} compact>
+              <h3 className="text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+                {item.question}
+              </h3>
+              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{item.answer}</p>
+            </Surface>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-[1200px]">
         <Surface featured className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <SectionLabel>ACCESS</SectionLabel>
@@ -243,7 +310,7 @@ export default function ForWorkPage() {
               Access <LocalizedText translationKey="products.aiForWork" fallback="AI for Work" /> on Payhip.
             </h2>
             <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#6B6B6B]">
-              Preview access, checkout, and delivery are handled through Payhip.
+              You will check out through Payhip and receive access there. UMATTR provides the program structure, lessons, and route guidance.
             </p>
           </div>
           <ButtonLink
