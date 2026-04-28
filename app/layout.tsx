@@ -14,6 +14,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://umattr.ca"),
   title: "UMATTR | AI Programs, Career Intelligence, and Consulting",
   description: "Premium Pathways into AI, Career Growth, and Consulting.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  manifest: "/site.webmanifest",
   other: {
     "p:domain_verify": "abebe2ece85ef332d4af671acdebed29",
   },
