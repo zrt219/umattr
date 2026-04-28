@@ -32,7 +32,7 @@ export default async function Icon() {
           alt="UMATTR"
           width="512"
           height="512"
-          style={{ transform: "scale(2)", transformOrigin: "center center" }}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
         />
       </div>
     ),

@@ -32,7 +32,7 @@ export default async function AppleIcon() {
           alt="UMATTR"
           width="180"
           height="180"
-          style={{ transform: "scale(2)", transformOrigin: "center center" }}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
         />
       </div>
     ),
