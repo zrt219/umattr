@@ -12,19 +12,19 @@ import { LocalizedText } from "../_components/locale-provider.jsx";
 
 const fitCards = [
   {
-    title: "Direction first",
+    title: "Role clarity",
     description:
-      "Use this when the next move feels blurry and you need a sharper read before you commit.",
+      "Use this when the next role, lane, or market direction needs to become more legible.",
+  },
+  {
+    title: "Pivot decisions",
+    description:
+      "Use this when you are comparing paths and need a calmer way to choose the next move.",
   },
   {
     title: "Positioning",
     description:
       "Use this when the story, signal, or framing around your path needs to get stronger.",
-  },
-  {
-    title: "Career clarity",
-    description:
-      "Use this when the decision is about route and positioning, not AI tool training.",
   },
 ];
 
@@ -59,6 +59,12 @@ const outcomeRows = [
   },
 ];
 
+const helpCenterHighlights = [
+  "Understand how Career Intelligence fits your next move.",
+  "Browse help without leaving the UMATTR domain.",
+  "Use the live assistant if you want a faster answer.",
+];
+
 export default function CareerIntelligencePageClient() {
   return (
     <MarketingChrome activeHref="/career-intelligence">
@@ -74,8 +80,9 @@ export default function CareerIntelligencePageClient() {
               />
             </h1>
             <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
-              A single premium package for people who need a clearer read on their
-              next step, a stronger position, and a more grounded route forward.
+              A single premium package for people making a next-move decision in
+              an AI-shaped market: role clarity, pivot direction, positioning,
+              and a more grounded route forward.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -184,6 +191,50 @@ export default function CareerIntelligencePageClient() {
             </Surface>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto mt-16 max-w-[1200px]">
+        <Surface
+          featured
+          className="overflow-hidden border-[rgba(168,132,58,0.28)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,246,236,0.96))] shadow-[0_30px_88px_rgba(33,27,18,0.1)]"
+        >
+          <BrandBirdMark />
+          <div className="relative mx-auto max-w-[760px] text-center">
+            <SectionLabel className="justify-center">HELP CENTER</SectionLabel>
+            <h2 className="mt-4 text-[clamp(2rem,3.2vw,3.35rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+              Explore the Help Center without leaving UMATTR.
+            </h2>
+            <p className="mx-auto mt-5 max-w-[40rem] text-[15px] leading-8 text-[#6B6B6B] md:text-[16px]">
+              Get clearer answers on fit, access, and how Career Intelligence is
+              meant to be used. The full help experience stays on the UMATTR
+              domain, and the live assistant remains available in the bottom
+              right corner.
+            </p>
+
+            <div className="mt-8 flex items-center justify-center">
+              <ButtonLink
+                href="/help"
+                className="premium-button button-primary button-standout rounded-[20px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-8 py-5 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+              >
+                Ask the assistant
+              </ButtonLink>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-3 text-left md:grid-cols-3">
+              {helpCenterHighlights.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-[20px] border border-[rgba(198,165,92,0.14)] bg-white/76 px-5 py-5 shadow-[0_16px_40px_rgba(33,27,18,0.05)]"
+                >
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+                    Support
+                  </div>
+                  <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Surface>
       </section>
 
       <section className="mx-auto mt-16 max-w-[1200px]">

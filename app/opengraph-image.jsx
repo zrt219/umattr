@@ -86,7 +86,7 @@ export default async function OpenGraphImage() {
                 letterSpacing: "-0.05em",
               }}
             >
-              Practical AI programs, career intelligence, and premium advisory.
+              Practical AI Programs, Career Intelligence, and Premium Advisory.
             </div>
             <div
               style={{
@@ -95,7 +95,7 @@ export default async function OpenGraphImage() {
                 color: "rgba(246, 238, 219, 0.82)",
               }}
             >
-              UMATTR helps people and businesses grow, adapt, and stay ahead.
+              UMATTR Helps People and Businesses Learn, Adapt, and Stay Ahead.
             </div>
           </div>
         </div>

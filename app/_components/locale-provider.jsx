@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useId, useMemo, useRef, useState } from "react";
 import ar from "../../locales/ar.json";
 import en from "../../locales/en.json";
 import es from "../../locales/es.json";
@@ -115,31 +115,117 @@ export function LanguageSelector({ className = "" }) {
 }
 
 export function GTranslateWidget({ className = "" }) {
+  const wrapperRef = useRef(null);
+  const instanceId = useId().replace(/:/g, "");
+  const [isReady, setIsReady] = useState(false);
+
   useEffect(() => {
+    const wrapper = wrapperRef.current;
+
+    if (!wrapper) {
+      return undefined;
+    }
+
+    const selector = `[data-gtranslate-instance="${instanceId}"]`;
+    let cancelled = false;
+    let retryTimer = null;
+    let observer = null;
+
     window.gtranslateSettings = {
       default_language: "en",
       native_language_names: true,
-      wrapper_selector: ".gtranslate_wrapper",
+      wrapper_selector: selector,
     };
 
-    if (document.querySelector("script[data-umattr-gtranslate]")) {
-      return;
+    const markReady = () => {
+      const hasSelect = Boolean(wrapper.querySelector("select"));
+      if (!cancelled) {
+        setIsReady(hasSelect);
+      }
+      return hasSelect;
+    };
+
+    const loadScript = ({ forceReload = false } = {}) => {
+      const existing = document.querySelector("script[data-umattr-gtranslate]");
+
+      if (forceReload && existing) {
+        existing.remove();
+      }
+
+      const reusable = document.querySelector("script[data-umattr-gtranslate]");
+      if (reusable) {
+        return reusable;
+      }
+
+      const script = document.createElement("script");
+      script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+      script.async = true;
+      script.defer = true;
+      script.dataset.umattrGtranslate = "true";
+      script.addEventListener("load", () => {
+        script.dataset.loaded = "true";
+        window.setTimeout(markReady, 120);
+      });
+      document.body.appendChild(script);
+      return script;
+    };
+
+    observer = new MutationObserver(() => {
+      if (markReady()) {
+        observer?.disconnect();
+      }
+    });
+    observer.observe(wrapper, { childList: true, subtree: true });
+
+    if (!markReady()) {
+      const script = loadScript();
+      const loadedHandler = () => {
+        window.setTimeout(markReady, 120);
+      };
+
+      script.addEventListener("load", loadedHandler);
+
+      retryTimer = window.setTimeout(() => {
+        if (!markReady()) {
+          loadScript({ forceReload: true });
+        }
+      }, 1800);
+
+      return () => {
+        cancelled = true;
+        script.removeEventListener("load", loadedHandler);
+        if (retryTimer) {
+          window.clearTimeout(retryTimer);
+        }
+        observer?.disconnect();
+      };
     }
 
-    const script = document.createElement("script");
-    script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
-    script.async = true;
-    script.defer = true;
-    script.dataset.umattrGtranslate = "true";
-    document.body.appendChild(script);
-  }, []);
+    return () => {
+      cancelled = true;
+      if (retryTimer) {
+        window.clearTimeout(retryTimer);
+      }
+      observer?.disconnect();
+    };
+  }, [instanceId]);
 
   return (
     <div
-      className={`gtranslate-shell h-[46px] w-[132px] overflow-hidden rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/82 px-3 text-[13px] font-medium text-[#1A1A1A] shadow-[0_7px_20px_rgba(33,27,18,0.03)] transition-all duration-200 hover:border-[rgba(198,165,92,0.32)] sm:w-[158px] ${className}`}
+      className={`gtranslate-shell relative h-[46px] w-[132px] overflow-hidden rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/82 px-3 text-[13px] font-medium text-[#1A1A1A] shadow-[0_7px_20px_rgba(33,27,18,0.03)] transition-all duration-200 hover:border-[rgba(198,165,92,0.32)] sm:w-[158px] ${className}`}
       aria-label="Translate website"
     >
-      <div className="gtranslate_wrapper" />
+      {!isReady ? (
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-between px-5 text-[#1A1A1A]">
+          <span>English</span>
+          <span aria-hidden="true" className="text-[11px] opacity-70">v</span>
+        </div>
+      ) : null}
+      <div
+        ref={wrapperRef}
+        data-gtranslate-instance={instanceId}
+        className={`gtranslate_wrapper ${isReady ? "opacity-100" : "opacity-0"}`}
+      />
     </div>
   );
 }

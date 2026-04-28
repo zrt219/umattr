@@ -2,6 +2,14 @@
 
 import Link from "next/link";
 import { GTranslateWidget, useLocale } from "./locale-provider.jsx";
+import {
+  FREE_TOOL_LINKS,
+  PAYHIP_LINKS,
+  PROGRAM_DETAIL_LINKS,
+  START_FREE_HREF,
+} from "../../lib/umattr-links.js";
+
+export { FREE_TOOL_LINKS, PAYHIP_LINKS, PROGRAM_DETAIL_LINKS, START_FREE_HREF };
 
 export const SITE_NAV_ITEMS = [
   { key: "common.home", fallback: "Home", href: "/" },
@@ -41,7 +49,6 @@ export const FOOTER_COLUMNS = [
     title: "Account",
     links: [
       { key: "common.about", fallback: "About", href: "/about" },
-      { key: "common.login", fallback: "Login", href: "/login" },
       { label: "Start Free", href: "/start" },
     ],
   },
@@ -68,32 +75,22 @@ export const SOCIAL_LINKS = [
     href: "https://www.youtube.com/@UMATTROfficial",
     icon: "youtube",
   },
+  {
+    label: "Kick",
+    href: "https://kick.com/umattr",
+    icon: "kick",
+  },
+  {
+    label: "Pinterest",
+    href: "https://ca.pinterest.com/umattrofficial/",
+    icon: "pinterest",
+  },
+  {
+    label: "X",
+    href: "https://x.com/UMATTROfficial",
+    icon: "x",
+  },
 ];
-
-export const START_FREE_HREF = "https://umattr.ca/start";
-
-export const PROGRAM_DETAIL_LINKS = {
-  foundations: "/programs/foundations",
-  forWork: "/programs/for-work",
-  forBusiness: "/programs/for-business",
-};
-
-export const PAYHIP_LINKS = {
-  foundations: "https://payhip.com/b/FKJ7n",
-  forWork: "https://payhip.com/b/HshI4",
-  forBusiness: "https://payhip.com/b/T5xuf",
-  careerFamily: "https://payhip.com/b/iybAI",
-  careerCore: "https://payhip.com/umattr/career-intelligence/core",
-  careerPlus: "https://payhip.com/umattr/career-intelligence/plus",
-  careerPro: "https://payhip.com/umattr/career-intelligence/pro",
-};
-
-export const FREE_TOOL_LINKS = {
-  assessment: "/assessment",
-  glossary: "/glossary",
-  dashboard: "/dashboard",
-  previews: "/programs/foundations",
-};
 
 export const CONSULTING_INQUIRY_HREF =
   "mailto:consulting@umattr.com?subject=UMATTR%20Consulting%20Request&body=Decision%3A%0ATimeline%3A%0AContext%3A%0AWhat%20needs%20attention%3A";
@@ -229,6 +226,30 @@ function SocialIcon({ icon }) {
     );
   }
 
+  if (icon === "kick") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+        <path d="M5.8 4.2h4.1v5l4.4-5h5l-5.5 6.2 5.9 9.4h-4.8L11.7 14l-1.8 2v3.8H5.8V4.2Z" />
+      </svg>
+    );
+  }
+
+  if (icon === "pinterest") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+        <path d="M12 2.2a9.8 9.8 0 0 0-3.6 18.9c-.1-.8-.2-2 .1-2.9l1.4-5.8s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.5-.3 1.1.6 2 1.7 2 2.1 0 3.6-2.6 3.6-5.7 0-2.4-1.6-4.3-4.6-4.3-3.4 0-5.5 2.6-5.5 5.5 0 1 .3 1.7.8 2.2.2.2.2.3.2.5-.1.4-.2 1.2-.2 1.4 0 .2-.1.3-.4.2-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.7-6.1 3.5 0 6.2 2.5 6.2 5.9 0 3.5-2.2 6.3-5.3 6.3-1 0-1.9-.5-2.2-1.1l-.6 2.2c-.2.9-.8 2-1.2 2.7A9.8 9.8 0 1 0 12 2.2Z" />
+      </svg>
+    );
+  }
+
+  if (icon === "x") {
+    return (
+      <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+        <path d="M4.5 4.5h3.7l4 5.7 4.6-5.7h3.2l-6.4 7.9 6.7 7.1h-3.7l-4.4-5.1-4.9 5.1H4l6.9-8.3L4.5 4.5Z" />
+      </svg>
+    );
+  }
+
   return (
     <svg className={iconClassName} viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
       <path d="M21.6 7.1a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.5a3 3 0 0 0-2.1 2.1A31 31 0 0 0 1.9 12c0 1.7.1 3.4.5 4.9A3 3 0 0 0 4.5 19c1.8.5 7.5.5 7.5.5s5.7 0 7.5-.5a3 3 0 0 0 2.1-2.1c.4-1.5.5-3.2.5-4.9s-.1-3.4-.5-4.9ZM10 15.3V8.7l5.7 3.3-5.7 3.3Z" />
@@ -238,7 +259,7 @@ function SocialIcon({ icon }) {
 
 export function SocialLinks({ className = "" }) {
   return (
-    <div className={`flex flex-wrap items-center gap-3 ${className}`}>
+    <div className={`flex flex-nowrap items-center gap-2 overflow-x-auto pb-1 ${className}`}>
       {SOCIAL_LINKS.map((link) => (
         <a
           key={link.label}
@@ -247,7 +268,7 @@ export function SocialLinks({ className = "" }) {
           title={link.label}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#D4AF37]/45 text-[#D4AF37] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#E6C65C] hover:bg-[#E6C65C]/12 hover:text-[#B8962E]"
+          className="inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-[#D4AF37]/45 text-[#D4AF37] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#E6C65C] hover:bg-[#E6C65C]/12 hover:text-[#B8962E] sm:h-10 sm:w-10"
         >
           <SocialIcon icon={link.icon} />
         </a>
@@ -297,6 +318,13 @@ function MarketingStyles() {
         --text-secondary: #6B6B6B;
         --border-soft: rgba(198, 165, 92, 0.16);
         --border-strong: rgba(198, 165, 92, 0.28);
+        --priority-high: #D4AF37;
+        --priority-medium: #A8843A;
+        --priority-strategic: #6B6B6B;
+        --priority-high-border: rgba(198, 165, 92, 0.28);
+        --priority-medium-border: rgba(198, 165, 92, 0.16);
+        --priority-strategic-border: rgba(198, 165, 92, 0.12);
+        --priority-soft-bg: rgba(248, 246, 241, 0.72);
         --shadow-card: 0 22px 68px rgba(33, 27, 18, 0.07), 0 8px 24px rgba(33, 27, 18, 0.04);
         --shadow-hover: 0 28px 84px rgba(33, 27, 18, 0.11), 0 12px 30px rgba(33, 27, 18, 0.07);
         --shadow-nav: 0 10px 40px rgba(35, 28, 18, 0.06);
@@ -454,7 +482,43 @@ function MarketingStyles() {
       }
 
       .subtle-link:hover {
-        color: var(--text-primary);
+        color: var(--gold-deep);
+      }
+
+      .priority-badge {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        border-radius: 999px;
+        border: 1px solid var(--priority-medium-border);
+        background: rgba(255, 255, 255, 0.72);
+        padding: 0.42rem 0.62rem;
+        color: var(--gold-deep);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .priority-high {
+        border-color: var(--priority-high-border);
+        box-shadow: 0 18px 50px rgba(184, 150, 46, 0.10);
+      }
+
+      .priority-high:hover {
+        border-color: rgba(212, 175, 55, 0.48);
+        box-shadow: 0 24px 68px rgba(184, 150, 46, 0.16);
+      }
+
+      .priority-medium {
+        border-color: var(--priority-medium-border);
+        background: var(--priority-soft-bg);
+      }
+
+      .priority-strategic {
+        border-color: var(--priority-strategic-border);
+        color: var(--priority-strategic);
       }
 
       .gtranslate-shell {
@@ -556,6 +620,26 @@ function SiteFooter({ footerLine = DEFAULT_FOOTER_LINE }) {
           <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
             {footerLine}
           </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <ButtonLink
+              href="/start"
+              className="inline-flex items-center rounded-full border border-[rgba(198,165,92,0.16)] bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A8843A] no-underline transition-all duration-200 hover:border-[rgba(198,165,92,0.28)] hover:text-[#1A1A1A]"
+            >
+              Start Free
+            </ButtonLink>
+            <ButtonLink
+              href="/programs"
+              className="inline-flex items-center rounded-full border border-[rgba(198,165,92,0.16)] bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A8843A] no-underline transition-all duration-200 hover:border-[rgba(198,165,92,0.28)] hover:text-[#1A1A1A]"
+            >
+              Programs
+            </ButtonLink>
+            <ButtonLink
+              href="/career-intelligence"
+              className="inline-flex items-center rounded-full border border-[rgba(198,165,92,0.16)] bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A8843A] no-underline transition-all duration-200 hover:border-[rgba(198,165,92,0.28)] hover:text-[#1A1A1A]"
+            >
+              Career Intelligence
+            </ButtonLink>
+          </div>
           <SocialLinks className="mt-6" />
         </div>
 

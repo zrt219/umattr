@@ -26,9 +26,9 @@ export default function UmattrProgramsPage() {
     foundations: "/programs/foundations",
     forWork: "/programs/for-work",
     forBusiness: "/programs/for-business",
-    previewWhatAiIs: "/programs/foundations",
-    previewBetterQuestions: "/programs/foundations",
-    previewSaferAiUse: "/programs/foundations",
+    previewWhatAiIs: PAYHIP_LINKS.sampleFoundations,
+    previewBetterQuestions: PAYHIP_LINKS.sampleFoundations,
+    previewSaferAiUse: PAYHIP_LINKS.sampleFoundations,
   };
 
   const programs = [
@@ -354,10 +354,10 @@ export default function UmattrProgramsPage() {
               <div className="fade-up pt-2">
                 <div className="text-[12px] font-semibold uppercase tracking-[0.34em] text-[#A8843A]">AI PROGRAMS</div>
                 <h1 className="mt-5 max-w-[10ch] text-[clamp(2.9rem,5.6vw,4.8rem)] font-semibold leading-[0.96] tracking-[-0.055em] text-[#1A1A1A]">
-                  Three programs. Three different decisions.
+                  Three programs. One route for each decision.
                 </h1>
                 <p className="mt-6 max-w-[36rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
-                  Choose the program that matches the kind of AI decision you are actually trying to make, then open the detail page for access and delivery.
+                  Choose the route that matches the decision you are actually making, then open the detail page for fit, access, and delivery.
                 </p>
               </div>
 
@@ -366,7 +366,7 @@ export default function UmattrProgramsPage() {
                 <div className="relative max-w-[27rem]">
                   <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">PRODUCT TRUTH</div>
                   <p className="mt-3 text-[15px] leading-7 text-[#6B6B6B]">
-                    UMATTR frames the programs clearly. Payhip handles previews, checkout, access, and delivery.
+                    UMATTR frames the programs clearly. Payhip handles previews, checkout, access, and delivery when you are ready.
                   </p>
                 </div>
                 <ButtonLink
@@ -551,9 +551,6 @@ export default function UmattrProgramsPage() {
                 <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
                   <a href="/about" className="subtle-link block">
                     {t("common.about", "About")}
-                  </a>
-                  <a href="/login" className="subtle-link block">
-                    {t("common.login", "Login")}
                   </a>
                   <a href={START_FREE_HREF} className="subtle-link block">
                     Start Free
