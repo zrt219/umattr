@@ -85,22 +85,22 @@ export default function ChatbaseSourcePage() {
   return (
     <main
       aria-label="Chatbase source content"
-      className="mx-auto max-w-4xl px-6 py-16 text-[#1A1A1A] md:px-10 lg:px-12"
+      className="mx-auto max-w-4xl px-6 py-16 text-[#1F1F1F] md:px-10 lg:px-12"
     >
-      <div className="text-[12px] font-semibold uppercase tracking-[0.3em] text-[#A8843A]">
+      <div className="text-[12px] font-semibold uppercase tracking-[0.3em] text-[#B8962E]">
         UMATTR Chatbase Source
       </div>
       <h1 className="mt-4 text-[clamp(2.4rem,5vw,4.5rem)] font-semibold leading-[0.95] tracking-[-0.055em]">
         Training content for the UMATTR chatbot.
       </h1>
-      <p className="mt-5 max-w-3xl text-[17px] leading-8 text-[#6B6B6B]">
+      <p className="mt-5 max-w-3xl text-[17px] leading-8 text-[#5A5A5A]">
         This page exists so Chatbase can crawl a single, structured source for
         UMATTR answers. It is not part of the public navigation.
       </p>
 
       <section className="mt-10 space-y-6">
         <h2 className="text-[20px] font-semibold tracking-[-0.03em]">Bot instructions</h2>
-        <pre className="whitespace-pre-wrap rounded-[20px] border border-[rgba(198,165,92,0.16)] bg-white/90 p-6 text-[14px] leading-7 text-[#4E4E4E] shadow-[0_12px_30px_rgba(33,27,18,0.05)]">
+        <pre className="whitespace-pre-wrap rounded-[20px] border border-[rgba(212,175,55,0.16)] bg-white/90 p-6 text-[15px] leading-7 text-[#5A5A5A] shadow-[0_12px_30px_rgba(33,27,18,0.05)]">
           {sourceText.trim()}
         </pre>
       </section>
@@ -111,10 +111,10 @@ export default function ChatbaseSourcePage() {
           {faqItems.map((item) => (
             <article
               key={item.question}
-              className="rounded-[20px] border border-[rgba(198,165,92,0.16)] bg-white/88 p-5 shadow-[0_12px_30px_rgba(33,27,18,0.05)]"
+              className="rounded-[20px] border border-[rgba(212,175,55,0.16)] bg-white/88 p-5 shadow-[0_12px_30px_rgba(33,27,18,0.05)]"
             >
               <h3 className="text-[16px] font-semibold tracking-[-0.03em]">{item.question}</h3>
-              <p className="mt-3 text-[15px] leading-7 text-[#5F5F5F]">{item.answer}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{item.answer}</p>
             </article>
           ))}
         </div>

@@ -117,16 +117,16 @@ function AboutSectionHeader({
 }) {
   return (
     <div className={className}>
-      <SectionLabel className="max-w-full text-[10px] tracking-[0.22em] sm:text-[11px] sm:tracking-[0.32em]">
+      <SectionLabel className="max-w-full text-[12px] tracking-[0.10em] sm:text-[12px] sm:tracking-[0.10em]">
         {label}
       </SectionLabel>
       <h2
-        className={`mt-4 max-w-[14ch] text-[clamp(2rem,6.6vw,3rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-[#1A1A1A] sm:leading-[0.96] sm:tracking-[-0.05em] ${titleClassName}`}
+        className={`mt-4 max-w-[14ch] text-[clamp(2rem,6.6vw,3rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-[#1F1F1F] sm:leading-[0.96] sm:tracking-[-0.05em] ${titleClassName}`}
       >
         {title}
       </h2>
       {description ? (
-        <p className="mt-5 max-w-[34rem] text-[16px] leading-8 text-[#6B6B6B] md:text-[17px]">
+        <p className="mt-5 max-w-[34rem] text-[16px] leading-8 text-[#5A5A5A] md:text-[17px]">
           {description}
         </p>
       ) : null}
@@ -193,16 +193,16 @@ function RouteSelectorSection() {
     <section className="mx-auto mt-16 max-w-[1200px]">
       <Surface
         featured
-        className="border-[rgba(198,165,92,0.34)] bg-[linear-gradient(145deg,rgba(255,255,255,0.96),rgba(250,247,240,0.9))] p-6 shadow-[0_28px_78px_rgba(86,70,34,0.10)] md:p-9 lg:p-12"
+        className="border-[rgba(212,175,55,0.34)] bg-[linear-gradient(145deg,rgba(255,255,255,0.96),rgba(250,247,240,0.9))] p-6 shadow-[0_28px_78px_rgba(86,70,34,0.10)] md:p-9 lg:p-12"
       >
         <div className="grid grid-cols-1 gap-9 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
           <div>
-            <SectionLabel className="tracking-[0.24em]">NEXT STEP</SectionLabel>
-            <div className="mt-5 h-px w-16 bg-[linear-gradient(90deg,#A8843A,rgba(168,132,58,0))]" />
-            <h2 className="mt-10 max-w-[11ch] text-[clamp(2.4rem,5vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-[#1A1A1A]">
+            <SectionLabel className="tracking-[0.10em]">NEXT STEP</SectionLabel>
+            <div className="mt-5 h-px w-16 bg-[linear-gradient(90deg,#B8962E,rgba(184,150,46,0))]" />
+            <h2 className="mt-10 max-w-[11ch] text-[clamp(2.4rem,5vw,4.5rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-[#1F1F1F]">
               Choose the route that fits the decision.
             </h2>
-            <p className="mt-7 max-w-[30rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
+            <p className="mt-7 max-w-[30rem] text-[17px] leading-8 text-[#5A5A5A] md:text-[18px]">
               Start with the path that matches what you need next.
             </p>
           </div>
@@ -213,7 +213,7 @@ function RouteSelectorSection() {
                 <ButtonLink
                   key={option.title}
                   href={option.href}
-                  className="group flex min-h-[104px] items-center gap-5 rounded-[24px] border border-[rgba(198,165,92,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(250,247,240,0.9))] px-5 py-4 text-[#1A1A1A] no-underline shadow-[0_14px_34px_rgba(86,70,34,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.34)] hover:shadow-[0_18px_42px_rgba(86,70,34,0.12)] md:px-6"
+                  className="group flex min-h-[104px] items-center gap-5 rounded-[24px] border border-[rgba(212,175,55,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(250,247,240,0.9))] px-5 py-4 text-[#1F1F1F] no-underline shadow-[0_14px_34px_rgba(86,70,34,0.08)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.34)] hover:shadow-[0_18px_42px_rgba(86,70,34,0.12)] md:px-6"
                 >
                   <span className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border border-[#B98D1C]/70 text-[#B98D1C] transition-all duration-200 group-hover:border-[#D4AF37] group-hover:bg-[#D4AF37]/8">
                     <RouteIcon type={option.icon} />
@@ -222,7 +222,7 @@ function RouteSelectorSection() {
                     <span className="block text-[clamp(1.45rem,3vw,2rem)] font-semibold leading-[1.08] tracking-[-0.035em]">
                       {option.title}
                     </span>
-                    <span className="mt-1 block text-[15px] leading-6 text-[#6B6B6B] md:text-[16px]">
+                    <span className="mt-1 block text-[15px] leading-6 text-[#5A5A5A] md:text-[16px]">
                       {option.description}
                     </span>
                   </span>
@@ -235,7 +235,7 @@ function RouteSelectorSection() {
 
             <ButtonLink
               href="/consulting"
-              className="group mt-7 flex items-center gap-4 border-t border-[rgba(198,165,92,0.16)] px-2 pt-6 text-[#1A1A1A] no-underline transition-colors duration-200 hover:text-[#A8843A]"
+              className="group mt-7 flex items-center gap-4 border-t border-[rgba(212,175,55,0.16)] px-2 pt-6 text-[#1F1F1F] no-underline transition-colors duration-200 hover:text-[#B8962E]"
             >
               <span className="flex h-10 w-10 items-center justify-center text-[#B98D1C]">
                 <svg
@@ -275,7 +275,7 @@ function OurJourneySection() {
     <section className="uj-journey mx-auto mt-16 max-w-[1200px]" aria-labelledby="umattr-journey-title">
       <style>{`
         .uj-journey {
-          --uj-bg: #F8F6F1;
+          --uj-bg: #F7F6F2;
           --uj-card: rgba(255, 255, 255, 0.76);
           --uj-text: #1d1d1f;
           --uj-muted: #6f6a61;
@@ -677,10 +677,10 @@ export default function AboutPage() {
         <SectionLabel>ABOUT</SectionLabel>
         <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
           <div className="fade-up">
-            <h1 className="max-w-[11ch] text-[clamp(3rem,6vw,4.75rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1A1A1A]">
+            <h1 className="max-w-[11ch] text-[clamp(3rem,6vw,4.75rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1F1F1F]">
               UMATTR helps people move clearly in an AI-shaped world.
             </h1>
-            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
+            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#5A5A5A] md:text-[18px]">
               AI is changing how people work, build, learn, and compete. UMATTR
               exists to make that shift easier to understand and easier to act
               on, moving people from uncertainty into the route that fits their
@@ -689,13 +689,13 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
                 href="/start"
-                className="premium-button button-primary min-h-[56px] rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-0 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)] sm:min-w-[11.75rem]"
+                className="premium-button button-primary min-h-[56px] rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-6 py-0 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)] sm:min-w-[11.75rem]"
               >
                 Start Free
               </ButtonLink>
               <ButtonLink
                 href="/programs"
-                className="premium-button button-secondary min-h-[56px] rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-0 text-[12.5px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white sm:min-w-[11.75rem]"
+                className="premium-button button-secondary min-h-[56px] rounded-[18px] border border-[rgba(212,175,55,0.18)] bg-white/75 px-6 py-0 text-[12.5px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white sm:min-w-[11.75rem]"
               >
                 View Programs
               </ButtonLink>
@@ -713,13 +713,13 @@ export default function AboutPage() {
               className="pointer-events-none absolute right-5 top-5 w-28 opacity-20 sm:w-36 lg:right-7 lg:top-7 lg:w-40"
             />
             <div className="relative">
-              <div className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+              <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
                 BRAND SHAPE
               </div>
-              <h2 className="mt-8 max-w-[12ch] text-[clamp(2rem,3vw,3.15rem)] font-semibold leading-[0.95] tracking-[-0.055em] text-[#1A1A1A]">
+              <h2 className="mt-8 max-w-[12ch] text-[clamp(2rem,3vw,3.15rem)] font-semibold leading-[0.95] tracking-[-0.055em] text-[#1F1F1F]">
                 Clarity first. Then the right route.
               </h2>
-              <p className="mt-5 max-w-[31rem] text-[16px] leading-8 text-[#5F5F5F] md:text-[17px]">
+              <p className="mt-5 max-w-[31rem] text-[16px] leading-8 text-[#5A5A5A] md:text-[17px]">
                 UMATTR turns AI uncertainty into a calmer path: start free,
                 learn the tools, sharpen positioning, or request human-guided
                 support when the decision carries more weight.
@@ -727,11 +727,11 @@ export default function AboutPage() {
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-start">
                 <ButtonLink
                   href="/start"
-                  className="premium-button button-primary inline-flex w-full items-center justify-center whitespace-nowrap rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-7 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)] sm:w-fit sm:min-w-[11rem]"
+                  className="premium-button button-primary inline-flex w-full items-center justify-center whitespace-nowrap rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)] sm:w-fit sm:min-w-[11rem]"
                 >
                   Start Free
                 </ButtonLink>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-[#8A7A58]">
+                <p className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
                   Programs, <LocalizedText translationKey="products.careerIntelligence" fallback="Career Intelligence" />, or consulting when ready.
                 </p>
               </div>
@@ -748,10 +748,10 @@ export default function AboutPage() {
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {points.map((point) => (
             <Surface key={point.title} compact>
-              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1F1F1F]">
                 {point.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{point.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{point.description}</p>
             </Surface>
           ))}
         </div>
@@ -765,7 +765,7 @@ export default function AboutPage() {
               title="UMATTR is being built by someone paying close attention."
               titleClassName="max-w-[15ch] text-[clamp(2rem,6.2vw,3.2rem)]"
             />
-            <div className="mt-5 max-w-[39rem] space-y-5 text-[16px] leading-8 text-[#6B6B6B] md:text-[17px]">
+            <div className="mt-5 max-w-[39rem] space-y-5 text-[16px] leading-8 text-[#5A5A5A] md:text-[17px]">
               <p>
                 Behind UMATTR is a person watching how AI is changing work,
                 confidence, and opportunity for ordinary ambitious people who do
@@ -782,7 +782,7 @@ export default function AboutPage() {
                 public, in private, and under pressure.
               </p>
             </div>
-            <p className="mt-6 max-w-[34rem] text-[13px] font-semibold uppercase tracking-[0.16em] text-[#8A7A58]">
+            <p className="mt-6 max-w-[34rem] text-[15px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
               That is why the work stays focused on direction, not just content.
             </p>
           </div>
@@ -791,19 +791,19 @@ export default function AboutPage() {
             featured
             className="border-[rgba(184,150,46,0.28)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,246,236,0.96))] shadow-[0_30px_88px_rgba(33,27,18,0.1)]"
           >
-            <div className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+            <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
               What shapes the work
             </div>
             <div className="mt-6 space-y-5">
               {behindSignals.map((signal, index) => (
                 <div
                   key={signal.title}
-                  className={index > 0 ? "border-t border-[rgba(198,165,92,0.12)] pt-5" : ""}
+                  className={index > 0 ? "border-t border-[rgba(212,175,55,0.12)] pt-5" : ""}
                 >
-                  <h3 className="text-[21px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+                  <h3 className="text-[21px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1F1F1F]">
                     {signal.title}
                   </h3>
-                  <p className="mt-3 max-w-[31rem] text-[15px] leading-7 text-[#5F5F5F]">
+                  <p className="mt-3 max-w-[31rem] text-[15px] leading-7 text-[#5A5A5A]">
                     {signal.description}
                   </p>
                 </div>
@@ -827,10 +827,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {futurePoints.map((point) => (
               <Surface key={point.title} className="p-5 md:p-6">
-                <div className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#A8843A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.2em] text-[#B8962E]">
                   {point.title}
                 </div>
-                <p className="mt-4 text-[15px] leading-7 text-[#5F5F5F]">
+                <p className="mt-4 text-[15px] leading-7 text-[#5A5A5A]">
                   {point.description}
                 </p>
               </Surface>

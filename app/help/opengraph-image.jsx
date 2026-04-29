@@ -25,7 +25,7 @@ export default async function OpenGraphImage() {
           alignItems: "center",
           justifyContent: "center",
           background:
-            "radial-gradient(circle at 18% 18%, rgba(198, 165, 92, 0.18), transparent 28%), linear-gradient(180deg, #171717 0%, #0C0C0C 100%)",
+            "radial-gradient(circle at 18% 18%, rgba(212, 175, 55, 0.18), transparent 28%), linear-gradient(180deg, #171717 0%, #0C0C0C 100%)",
           color: "#F6EEDB",
           fontFamily: '"Helvetica Neue", "Avenir Next", Arial, sans-serif',
         }}
@@ -38,7 +38,7 @@ export default async function OpenGraphImage() {
             flexDirection: "column",
             justifyContent: "space-between",
             borderRadius: 42,
-            border: "1px solid rgba(198, 165, 92, 0.22)",
+            border: "1px solid rgba(212, 175, 55, 0.22)",
             background:
               "linear-gradient(180deg, rgba(255,255,255,0.035) 0%, rgba(255,255,255,0.01) 100%)",
             boxShadow: "0 36px 100px rgba(0, 0, 0, 0.38)",
@@ -60,14 +60,14 @@ export default async function OpenGraphImage() {
                 alignItems: "center",
                 gap: 12,
                 borderRadius: 999,
-                border: "1px solid rgba(198, 165, 92, 0.22)",
+                border: "1px solid rgba(212, 175, 55, 0.22)",
                 background: "rgba(255,255,255,0.04)",
                 padding: "10px 18px",
                 fontSize: 18,
                 fontWeight: 700,
                 letterSpacing: "0.22em",
                 textTransform: "uppercase",
-                color: "#C6A55C",
+                color: "#D4AF37",
               }}
             >
               UMATTR
@@ -124,7 +124,7 @@ export default async function OpenGraphImage() {
                   width: 10,
                   height: 10,
                   borderRadius: "999px",
-                  background: "#C6A55C",
+                  background: "#D4AF37",
                 }}
               />
               <div>UMATTR</div>

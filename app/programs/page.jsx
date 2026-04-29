@@ -102,13 +102,13 @@ export default function UmattrProgramsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8F6F1] text-[#1A1A1A] antialiased selection:bg-[#C6A55C]/20">
+    <div className="min-h-screen bg-[#F7F6F2] text-[#1F1F1F] antialiased selection:bg-[#D4AF37]/20">
       <style>{`
         :root {
-          --ivory: #F8F6F1;
+          --ivory: #F7F6F2;
           --white: #FFFFFF;
-          --gold: #C6A55C;
-          --gold-deep: #A8843A;
+          --gold: #D4AF37;
+          --gold-deep: #B8962E;
           --gold-primary: #D4AF37;
           --gold-hover: #E6C65C;
           --gold-deep-hover: #B8962E;
@@ -116,16 +116,16 @@ export default function UmattrProgramsPage() {
           --button-primary-bg-hover: #E6C65C;
           --button-primary-border: #D4AF37;
           --button-primary-border-hover: #E6C65C;
-          --button-primary-text: #1A1A1A;
+          --button-primary-text: #1F1F1F;
           --button-secondary-bg: #D4AF37;
           --button-secondary-bg-hover: #E6C65C;
           --button-secondary-border: #D4AF37;
           --button-secondary-border-hover: #E6C65C;
-          --button-secondary-text: #1A1A1A;
-          --text-primary: #1A1A1A;
-          --text-secondary: #6B6B6B;
-          --border-soft: rgba(198, 165, 92, 0.16);
-          --border-strong: rgba(198, 165, 92, 0.28);
+          --button-secondary-text: #1F1F1F;
+          --text-primary: #1F1F1F;
+          --text-secondary: #5A5A5A;
+          --border-soft: rgba(212, 175, 55, 0.16);
+          --border-strong: rgba(212, 175, 55, 0.28);
           --shadow-card: 0 22px 68px rgba(33, 27, 18, 0.07), 0 8px 24px rgba(33, 27, 18, 0.04);
           --shadow-hover: 0 28px 84px rgba(33, 27, 18, 0.11), 0 12px 30px rgba(33, 27, 18, 0.07);
           --shadow-nav: 0 10px 40px rgba(35, 28, 18, 0.06);
@@ -166,8 +166,8 @@ export default function UmattrProgramsPage() {
           pointer-events: none;
           opacity: 0.035;
           background-image:
-            radial-gradient(circle at 18% 18%, rgba(198,165,92,0.14) 0, transparent 28%),
-            radial-gradient(circle at 82% 14%, rgba(168,132,58,0.10) 0, transparent 24%),
+            radial-gradient(circle at 18% 18%, rgba(212,175,55,0.14) 0, transparent 28%),
+            radial-gradient(circle at 82% 14%, rgba(184,150,46,0.10) 0, transparent 24%),
             radial-gradient(circle at 50% 80%, rgba(255,255,255,0.5) 0, transparent 30%);
           mix-blend-mode: multiply;
         }
@@ -257,7 +257,7 @@ export default function UmattrProgramsPage() {
           bottom: -10px;
           width: 100%;
           height: 1.5px;
-          background: linear-gradient(90deg, rgba(198,165,92,0), rgba(198,165,92,0.95), rgba(198,165,92,0));
+          background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,0.95), rgba(212,175,55,0));
           transform: scaleX(0.28);
           transform-origin: center;
           opacity: 0;
@@ -293,7 +293,7 @@ export default function UmattrProgramsPage() {
           height: 44px;
           border: 0 !important;
           background: transparent !important;
-          color: #1A1A1A !important;
+          color: #1F1F1F !important;
           font-family: inherit !important;
           font-size: 13px !important;
           font-weight: 600 !important;
@@ -303,16 +303,16 @@ export default function UmattrProgramsPage() {
         }
 
         .gtranslate-shell select option {
-          color: #1A1A1A;
+          color: #1F1F1F;
         }
       `}</style>
 
       <div className="relative overflow-hidden noise">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(198,165,92,0.12),transparent_32%),radial-gradient(circle_at_82%_14%,rgba(198,165,92,0.07),transparent_24%),radial-gradient(circle_at_50%_45%,rgba(255,255,255,0.85),transparent_40%)]" />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-[linear-gradient(180deg,rgba(255,255,255,0.95)_0%,rgba(248,246,241,0.86)_58%,rgba(248,246,241,0.52)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(212,175,55,0.12),transparent_32%),radial-gradient(circle_at_82%_14%,rgba(212,175,55,0.07),transparent_24%),radial-gradient(circle_at_50%_45%,rgba(255,255,255,0.85),transparent_40%)]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-[linear-gradient(180deg,rgba(255,255,255,0.95)_0%,rgba(247,246,242,0.86)_58%,rgba(247,246,242,0.52)_100%)]" />
 
         <header className="relative z-10 mx-auto max-w-[1440px] px-6 pt-6 md:px-10 lg:px-12">
-          <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(198,165,92,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
+          <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(212,175,55,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
             <a
               href="/"
               className="flex items-center gap-3 no-underline"
@@ -329,7 +329,7 @@ export default function UmattrProgramsPage() {
                 <a
                   key={item.label}
                   href={item.href}
-                  className={`nav-link text-[15px] font-medium tracking-[-0.02em] text-[#1A1A1A]/78 hover:text-[#1A1A1A] ${item.active ? "active" : ""}`}
+                  className={`nav-link text-[15px] font-medium tracking-[-0.02em] text-[#1F1F1F]/78 hover:text-[#1F1F1F] ${item.active ? "active" : ""}`}
                 >
                   {item.label}
                 </a>
@@ -340,7 +340,7 @@ export default function UmattrProgramsPage() {
               <GTranslateWidget />
               <ButtonLink
                 href={START_FREE_HREF}
-                className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
+                className="premium-button button-primary rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_10px_30px_rgba(212,175,55,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(212,175,55,0.28)]"
               >
                 Start Free
               </ButtonLink>
@@ -352,11 +352,11 @@ export default function UmattrProgramsPage() {
           <section className="mx-auto max-w-[1200px]">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
               <div className="fade-up pt-2">
-                <div className="text-[12px] font-semibold uppercase tracking-[0.34em] text-[#A8843A]">AI PROGRAMS</div>
-                <h1 className="mt-5 max-w-[10ch] text-[clamp(2.9rem,5.6vw,4.8rem)] font-semibold leading-[0.96] tracking-[-0.055em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">AI PROGRAMS</div>
+                <h1 className="mt-5 max-w-[10ch] text-[clamp(2.9rem,5.6vw,4.8rem)] font-semibold leading-[0.96] tracking-[-0.055em] text-[#1F1F1F]">
                   Three programs. One route for each decision.
                 </h1>
-                <p className="mt-6 max-w-[36rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
+                <p className="mt-6 max-w-[36rem] text-[17px] leading-8 text-[#5A5A5A] md:text-[18px]">
                   Choose the route that matches the decision you are actually making, then open the detail page for fit, access, and delivery.
                 </p>
               </div>
@@ -364,14 +364,14 @@ export default function UmattrProgramsPage() {
               <div className="premium-card fade-up relative min-h-[18rem] overflow-hidden rounded-[28px] border border-[rgba(184,150,46,0.28)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,246,236,0.96))] p-6 shadow-[0_30px_88px_rgba(33,27,18,0.1)] md:p-7 lg:min-h-[21rem] lg:self-end">
                 <BrandBirdMark className="-right-2 top-7 w-36 opacity-[0.16] sm:w-44 lg:-right-4 lg:top-8 lg:w-52" />
                 <div className="relative max-w-[27rem]">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">PRODUCT TRUTH</div>
-                  <p className="mt-3 text-[15px] leading-7 text-[#6B6B6B]">
+                  <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">PRODUCT TRUTH</div>
+                  <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">
                     UMATTR frames the programs clearly. Payhip handles previews, checkout, access, and delivery when you are ready.
                   </p>
                 </div>
                 <ButtonLink
                   href="/programs/foundations"
-                  className="premium-button button-primary relative mt-8 w-full rounded-[16px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-5 py-3.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.20)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.26)] lg:mt-12"
+                  className="premium-button button-primary relative mt-8 w-full rounded-[16px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] shadow-[0_10px_24px_rgba(212,175,55,0.20)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(212,175,55,0.26)] lg:mt-12"
                 >
                   Start with Foundations
                 </ButtonLink>
@@ -384,36 +384,36 @@ export default function UmattrProgramsPage() {
               {programs.map((program, index) => (
                 <article
                   key={program.title}
-                  className={`premium-card relative overflow-hidden rounded-[30px] border p-6 md:p-7 lg:p-8 ${program.featured ? "border-[rgba(168,132,58,0.24)] bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(250,247,240,0.92))] shadow-[0_24px_70px_rgba(33,27,18,0.08)]" : "border-[rgba(198,165,92,0.14)] bg-white/88 shadow-[var(--shadow-card)]"}`}
+                  className={`premium-card relative overflow-hidden rounded-[30px] border p-6 md:p-7 lg:p-8 ${program.featured ? "border-[rgba(184,150,46,0.24)] bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(250,247,240,0.92))] shadow-[0_24px_70px_rgba(33,27,18,0.08)]" : "border-[rgba(212,175,55,0.14)] bg-white/88 shadow-[var(--shadow-card)]"}`}
                   style={{ transitionDelay: `${index * 40}ms` }}
                 >
                   <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.30),rgba(255,255,255,0.14))]" />
                   <div className="relative grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-10">
                     <div>
-                      <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">{program.eyebrow}</div>
-                      <h2 className="mt-4 text-[30px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1A1A1A] md:text-[34px]">
+                      <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">{program.eyebrow}</div>
+                      <h2 className="mt-4 text-[30px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1F1F1F] md:text-[34px]">
                         {program.title}
                       </h2>
-                      <p className="mt-4 max-w-[42rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
+                      <p className="mt-4 max-w-[42rem] text-[15px] leading-7 text-[#5A5A5A] md:text-[16px] md:leading-8">
                         {program.description}
                       </p>
                     </div>
 
-                    <div className="rounded-[24px] border border-[rgba(198,165,92,0.10)] bg-white/74 p-5 md:p-6">
-                      <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#A8843A]">BEST FOR</div>
-                      <p className="mt-3 text-[14px] leading-6 text-[#6B6B6B] md:text-[15px] md:leading-7">
+                    <div className="rounded-[24px] border border-[rgba(212,175,55,0.10)] bg-white/74 p-5 md:p-6">
+                      <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">BEST FOR</div>
+                      <p className="mt-3 text-[15px] leading-6 text-[#5A5A5A] md:text-[15px] md:leading-7">
                         {program.bestFor}
                       </p>
                       <div className="mt-5 flex flex-wrap gap-3">
                         <ButtonLink
                           href={program.detailHref}
-                          className="premium-button button-secondary rounded-[15px] border border-[rgba(198,165,92,0.18)] bg-white/90 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.30)] hover:bg-white"
+                          className="premium-button button-secondary rounded-[15px] border border-[rgba(212,175,55,0.18)] bg-white/90 px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.30)] hover:bg-white"
                         >
                           View Program
                         </ButtonLink>
                         <ButtonLink
                           href={program.payhipHref}
-                          className="premium-button button-primary rounded-[15px] border border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.24)]"
+                          className="premium-button button-primary rounded-[15px] border border-[rgba(184,150,46,0.34)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] shadow-[0_10px_24px_rgba(212,175,55,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(212,175,55,0.24)]"
                         >
                           Access on Payhip
                         </ButtonLink>
@@ -425,14 +425,14 @@ export default function UmattrProgramsPage() {
             </div>
           </section>
 
-          <section className="mx-auto mt-16 max-w-[1200px] rounded-[28px] border border-[rgba(198,165,92,0.10)] bg-[linear-gradient(180deg,rgba(255,253,249,0.78),rgba(255,255,255,0.68))] p-6 shadow-[0_12px_38px_rgba(33,27,18,0.04)] md:p-7 lg:p-8">
+          <section className="mx-auto mt-16 max-w-[1200px] rounded-[28px] border border-[rgba(212,175,55,0.10)] bg-[linear-gradient(180deg,rgba(255,253,249,0.78),rgba(255,255,255,0.68))] p-6 shadow-[0_12px_38px_rgba(33,27,18,0.04)] md:p-7 lg:p-8">
             <div className="grid grid-cols-1 gap-7 lg:grid-cols-[0.95fr_2.05fr] lg:items-start lg:gap-8">
               <div className="lg:pt-1">
-                <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">FREE PREVIEWS</div>
-                <h2 className="mt-3 max-w-[12ch] text-[clamp(1.7rem,2.3vw,2.2rem)] font-semibold leading-[1] tracking-[-0.04em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">FREE PREVIEWS</div>
+                <h2 className="mt-3 max-w-[12ch] text-[clamp(1.7rem,2.3vw,2.2rem)] font-semibold leading-[1] tracking-[-0.04em] text-[#1F1F1F]">
                   Sample before the full program.
                 </h2>
-                <p className="mt-3 max-w-[26rem] text-[15px] leading-6 text-[#6B6B6B] md:text-[16px] md:leading-7">
+                <p className="mt-3 max-w-[26rem] text-[15px] leading-6 text-[#5A5A5A] md:text-[16px] md:leading-7">
                   Three free preview products on Payhip give users a lower-friction way into Foundations.
                 </p>
               </div>
@@ -442,19 +442,19 @@ export default function UmattrProgramsPage() {
                   {previewProducts.map((preview, index) => (
                     <article
                       key={preview.title}
-                      className="premium-card relative overflow-hidden rounded-[22px] border border-[rgba(198,165,92,0.12)] bg-white/82 p-4 shadow-[0_10px_28px_rgba(33,27,18,0.04)] md:p-5"
+                      className="premium-card relative overflow-hidden rounded-[22px] border border-[rgba(212,175,55,0.12)] bg-white/82 p-4 shadow-[0_10px_28px_rgba(33,27,18,0.04)] md:p-5"
                       style={{ transitionDelay: `${index * 36}ms` }}
                     >
                       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.28),rgba(255,255,255,0.12))]" />
                       <div className="relative flex h-full min-h-[184px] flex-col justify-between md:min-h-[192px]">
                         <div>
-                          <div className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+                          <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
                             {preview.eyebrow}
                           </div>
-                          <h3 className="mt-3 text-[20px] font-semibold leading-[1.04] tracking-[-0.035em] text-[#1A1A1A] md:text-[21px]">
+                          <h3 className="mt-3 text-[20px] font-semibold leading-[1.04] tracking-[-0.035em] text-[#1F1F1F] md:text-[21px]">
                             {preview.title}
                           </h3>
-                          <p className="mt-3 max-w-[18rem] text-[13px] leading-6 text-[#6B6B6B] md:text-[13.5px]">
+                          <p className="mt-3 max-w-[18rem] text-[15px] leading-6 text-[#5A5A5A] md:text-[15px]">
                             {preview.description}
                           </p>
                         </div>
@@ -462,7 +462,7 @@ export default function UmattrProgramsPage() {
                         <div className="mt-5">
                           <ButtonLink
                             href={preview.href}
-                            className="premium-button button-secondary rounded-[14px] border border-[rgba(198,165,92,0.22)] bg-white/88 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] shadow-[0_6px_18px_rgba(33,27,18,0.03)] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
+                            className="premium-button button-secondary rounded-[14px] border border-[rgba(212,175,55,0.22)] bg-white/88 px-4 py-2.5 text-[12.5px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] shadow-[0_6px_18px_rgba(33,27,18,0.03)] hover:-translate-y-0.5 hover:border-[rgba(184,150,46,0.30)] hover:bg-white"
                           >
                             Open Preview
                           </ButtonLink>
@@ -475,17 +475,17 @@ export default function UmattrProgramsPage() {
             </div>
           </section>
 
-          <section className="mx-auto mt-8 max-w-[1200px] rounded-[24px] border border-[rgba(168,132,58,0.16)] bg-[linear-gradient(180deg,rgba(255,250,244,0.78),rgba(255,255,255,0.72))] px-5 py-4 shadow-[0_10px_30px_rgba(33,27,18,0.04)] md:px-6 md:py-5">
+          <section className="mx-auto mt-8 max-w-[1200px] rounded-[24px] border border-[rgba(184,150,46,0.16)] bg-[linear-gradient(180deg,rgba(255,250,244,0.78),rgba(255,255,255,0.72))] px-5 py-4 shadow-[0_10px_30px_rgba(33,27,18,0.04)] md:px-6 md:py-5">
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">PRODUCT TRUTH</div>
-                <p className="mt-2 max-w-[42rem] text-[14px] leading-6 text-[#6B6B6B] md:text-[15px] md:leading-7">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">PRODUCT TRUTH</div>
+                <p className="mt-2 max-w-[42rem] text-[15px] leading-6 text-[#5A5A5A] md:text-[15px] md:leading-7">
                   UMATTR explains the products clearly. Payhip handles access, checkout, and delivery for AI Programs and free previews.
                 </p>
               </div>
               <ButtonLink
                 href="/programs/foundations"
-                className="premium-button button-secondary shrink-0 self-start rounded-[14px] border border-[rgba(198,165,92,0.18)] bg-white/90 px-4 py-2.5 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(168,132,58,0.30)] hover:bg-white"
+                className="premium-button button-secondary shrink-0 self-start rounded-[14px] border border-[rgba(212,175,55,0.18)] bg-white/90 px-4 py-2.5 text-[12.5px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(184,150,46,0.30)] hover:bg-white"
               >
                 View Foundations
               </ButtonLink>
@@ -493,9 +493,9 @@ export default function UmattrProgramsPage() {
           </section>
         </main>
 
-        <footer className="border-t border-[rgba(168,132,58,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
+        <footer className="border-t border-[rgba(184,150,46,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
           <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.08fr_1.92fr] lg:gap-14 lg:px-12">
-            <div className="border-b border-[rgba(198,165,92,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
+            <div className="border-b border-[rgba(212,175,55,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
               <a
                 href="/"
                 className="block max-w-[240px] no-underline"
@@ -506,7 +506,7 @@ export default function UmattrProgramsPage() {
                   className="h-auto w-full object-contain"
                 />
               </a>
-              <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
+              <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#5A5A5A] md:text-[16px] md:leading-8">
                 Start free, then move into the path that fits the decision.
               </p>
               <SocialLinks className="mt-6" />
@@ -514,8 +514,8 @@ export default function UmattrProgramsPage() {
 
             <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:pl-2">
               <div>
-                <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">NAVIGATION</div>
-                <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">NAVIGATION</div>
+                <div className="mt-5 space-y-3 text-[15px] text-[#1F1F1F] md:text-[16px]">
                   <a href="/" className="subtle-link block">
                     {t("common.home", "Home")}
                   </a>
@@ -532,8 +532,8 @@ export default function UmattrProgramsPage() {
               </div>
 
               <div>
-                <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">PROGRAMS</div>
-                <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">PROGRAMS</div>
+                <div className="mt-5 space-y-3 text-[15px] text-[#1F1F1F] md:text-[16px]">
                   <a href="/programs/foundations" className="subtle-link block">
                     UMATTR {t("products.aiFoundations", "AI Foundations")}
                   </a>
@@ -547,8 +547,8 @@ export default function UmattrProgramsPage() {
               </div>
 
               <div>
-                <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">ACCOUNT</div>
-                <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">ACCOUNT</div>
+                <div className="mt-5 space-y-3 text-[15px] text-[#1F1F1F] md:text-[16px]">
                   <a href="/about" className="subtle-link block">
                     {t("common.about", "About")}
                   </a>

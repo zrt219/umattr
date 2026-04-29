@@ -108,14 +108,14 @@ export default function ForWorkPage() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
           <div className="fade-up">
             <SectionLabel>AI PROGRAM</SectionLabel>
-            <h1 className="mt-4 max-w-[10ch] text-[clamp(3rem,6vw,4.9rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1A1A1A]">
+            <h1 className="mt-4 max-w-[10ch] text-[clamp(3rem,6vw,4.9rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1F1F1F]">
               <LocalizedText
                 translationKey="products.aiForWork"
                 fallback="AI for Work"
                 suffix=" with sharper daily output."
               />
             </h1>
-            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
+            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#5A5A5A] md:text-[18px]">
               A practical route for people who want AI to help with real work,
               not just casual experimentation. Use it to move faster, cut rework,
               and keep quality steady.
@@ -124,13 +124,13 @@ export default function ForWorkPage() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
                 href={PAYHIP_LINKS.forWork}
-                className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+                className="premium-button button-primary rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)]"
               >
                 Access on Payhip
               </ButtonLink>
               <ButtonLink
                 href={PROGRAM_DETAIL_LINKS.forBusiness}
-                className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                className="premium-button button-secondary rounded-[18px] border border-[rgba(212,175,55,0.18)] bg-white/75 px-6 py-4 text-[15px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
               >
                 Next:{" "}
                 <LocalizedText
@@ -140,13 +140,13 @@ export default function ForWorkPage() {
               </ButtonLink>
               <ButtonLink
                 href="/programs/foundations"
-                className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                className="premium-button button-secondary rounded-[18px] border border-[rgba(212,175,55,0.18)] bg-white/75 px-6 py-4 text-[15px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
               >
                 Back to Foundations
               </ButtonLink>
             </div>
 
-            <p className="mt-8 max-w-[34rem] text-[14px] leading-7 text-[#6B6B6B]">
+            <p className="mt-8 max-w-[34rem] text-[15px] leading-7 text-[#5A5A5A]">
               UMATTR frames the program. Payhip handles secure checkout and delivery when you are ready.
             </p>
           </div>
@@ -156,31 +156,31 @@ export default function ForWorkPage() {
             featured
           >
             <BrandBirdMark />
-            <div className="relative text-[12px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+            <div className="relative text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
               Payhip delivery
             </div>
             <div className="relative mt-6 space-y-5">
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   For
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   People who want more useful AI in their daily workflow.
                 </p>
               </div>
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   You leave with
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   Cleaner drafts, better structure, and a more repeatable process.
                 </p>
               </div>
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   Best next step
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   Buy through Payhip, then move into Business when the stakes grow.
                 </p>
               </div>
@@ -191,16 +191,16 @@ export default function ForWorkPage() {
 
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>WHAT THIS PROGRAM IS FOR</SectionLabel>
-        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
           Make AI useful inside real work.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {purposeCards.map((card) => (
             <Surface key={card.title} compact>
-              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1F1F1F]">
                 {card.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{card.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{card.description}</p>
             </Surface>
           ))}
         </div>
@@ -208,16 +208,16 @@ export default function ForWorkPage() {
 
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>WHAT YOU WILL LEARN</SectionLabel>
-        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
           Practical habits for faster, cleaner work.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {learnCards.map((card) => (
             <Surface key={card.title} compact>
-              <h3 className="text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1F1F1F]">
                 {card.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{card.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{card.description}</p>
             </Surface>
           ))}
         </div>
@@ -227,10 +227,10 @@ export default function ForWorkPage() {
         <SectionLabel>OUTCOME / FIT</SectionLabel>
         <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
           <Surface featured>
-            <h2 className="text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1A1A1A]">
+            <h2 className="text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1F1F1F]">
               Best fit
             </h2>
-            <div className="mt-4 space-y-3 text-[15px] leading-7 text-[#6B6B6B]">
+            <div className="mt-4 space-y-3 text-[15px] leading-7 text-[#5A5A5A]">
               <p>You already know the basics and want practical leverage.</p>
               <p>You need a better daily workflow, not just a novelty tool.</p>
               <p>You want output that is faster without being careless.</p>
@@ -238,10 +238,10 @@ export default function ForWorkPage() {
           </Surface>
 
           <Surface>
-            <h2 className="text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1A1A1A]">
+            <h2 className="text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1F1F1F]">
               Outcome
             </h2>
-            <div className="mt-4 space-y-3 text-[15px] leading-7 text-[#6B6B6B]">
+            <div className="mt-4 space-y-3 text-[15px] leading-7 text-[#5A5A5A]">
               <p>More useful drafts, summaries, and working notes.</p>
               <p>A clearer repeatable process for using AI at work.</p>
               <p>A cleaner handoff into the business-level route if needed.</p>
@@ -252,16 +252,16 @@ export default function ForWorkPage() {
 
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>MODULE OVERVIEW</SectionLabel>
-        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
           Modules as summaries only.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {moduleCards.map((card) => (
             <Surface key={card.title} compact>
-              <h3 className="text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1F1F1F]">
                 {card.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{card.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{card.description}</p>
             </Surface>
           ))}
         </div>
@@ -269,17 +269,17 @@ export default function ForWorkPage() {
 
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>FORMAT / TIMELINE</SectionLabel>
-        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
           Practical enough to use inside the week.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {formatCards.map((card, index) => (
             <Surface key={card.title} compact featured={index === 0} className={index === 0 ? "priority-high" : "priority-medium"}>
               <span className="priority-badge">{index === 0 ? "FIX NOW" : "IMPROVE NEXT"}</span>
-              <h3 className="mt-5 text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="mt-5 text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1F1F1F]">
                 {card.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{card.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{card.description}</p>
             </Surface>
           ))}
         </div>
@@ -287,16 +287,16 @@ export default function ForWorkPage() {
 
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>FAQ</SectionLabel>
-        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
           Questions before access.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
           {faqItems.map((item) => (
             <Surface key={item.question} compact>
-              <h3 className="text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="text-[20px] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1F1F1F]">
                 {item.question}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{item.answer}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{item.answer}</p>
             </Surface>
           ))}
         </div>
@@ -306,16 +306,16 @@ export default function ForWorkPage() {
         <Surface featured className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <SectionLabel>ACCESS</SectionLabel>
-              <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+              <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
               Access <LocalizedText translationKey="products.aiForWork" fallback="AI for Work" /> on Payhip.
             </h2>
-            <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#6B6B6B]">
+            <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#5A5A5A]">
               You will check out through Payhip and receive access there. UMATTR provides the program structure, lessons, and route guidance.
             </p>
           </div>
           <ButtonLink
             href={PAYHIP_LINKS.forWork}
-            className="premium-button button-primary shrink-0 rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+            className="premium-button button-primary shrink-0 rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)]"
           >
             Access on Payhip
           </ButtonLink>

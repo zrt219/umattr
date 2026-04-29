@@ -72,14 +72,14 @@ export default function CareerIntelligencePageClient() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
           <div className="fade-up">
             <SectionLabel>CAREER INTELLIGENCE</SectionLabel>
-            <h1 className="mt-4 max-w-[10ch] text-[clamp(3rem,6vw,4.9rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1A1A1A]">
+            <h1 className="mt-4 max-w-[10ch] text-[clamp(3rem,6vw,4.9rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1F1F1F]">
               <LocalizedText
                 translationKey="products.careerIntelligence"
                 fallback="Career Intelligence"
                 suffix=" for direction and positioning."
               />
             </h1>
-            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
+            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#5A5A5A] md:text-[18px]">
               A single premium package for people making a next-move decision in
               an AI-shaped market: role clarity, pivot direction, positioning,
               and a more grounded route forward.
@@ -88,7 +88,7 @@ export default function CareerIntelligencePageClient() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
                 href={PAYHIP_LINKS.careerFamily}
-                className="premium-button button-primary button-standout rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+                className="premium-button button-primary button-standout rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)]"
               >
                 Access{" "}
                 <LocalizedText
@@ -98,7 +98,7 @@ export default function CareerIntelligencePageClient() {
               </ButtonLink>
               <ButtonLink
                 href="/start"
-                className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                className="premium-button button-secondary rounded-[18px] border border-[rgba(212,175,55,0.18)] bg-white/75 px-6 py-4 text-[15px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
               >
                 Start Free
               </ButtonLink>
@@ -110,32 +110,32 @@ export default function CareerIntelligencePageClient() {
             featured
           >
             <BrandBirdMark />
-            <div className="relative text-[12px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+            <div className="relative text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
               Distinction
             </div>
             <div className="relative mt-6 space-y-5">
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   Not AI training
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   <LocalizedText translationKey="products.careerIntelligence" fallback="Career Intelligence" /> is not about learning the tool. It is about getting clearer on direction and positioning.
                 </p>
               </div>
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   What it is for
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   Choosing the next move, tightening the story, and making the path
                   more legible.
                 </p>
               </div>
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   Access route
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   Access the package on Payhip when direction and positioning are
                   the real decision.
                 </p>
@@ -147,16 +147,16 @@ export default function CareerIntelligencePageClient() {
 
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>WHAT IT IS FOR</SectionLabel>
-        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
           One package for route clarity.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {fitCards.map((card) => (
             <Surface key={card.title} compact>
-              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1F1F1F]">
                 {card.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{card.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{card.description}</p>
             </Surface>
           ))}
         </div>
@@ -164,16 +164,16 @@ export default function CareerIntelligencePageClient() {
 
       <section className="mx-auto mt-16 max-w-[1200px]">
         <SectionLabel>WHAT'S INCLUDED</SectionLabel>
-        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+        <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
           A clearer read, a stronger story, and a next-step route.
         </h2>
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
           {includedCards.map((card) => (
             <Surface key={card.title} compact>
-              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1A1A1A]">
+              <h3 className="text-[21px] font-semibold leading-[1.05] tracking-[-0.04em] text-[#1F1F1F]">
                 {card.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{card.description}</p>
+              <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{card.description}</p>
             </Surface>
           ))}
         </div>
@@ -184,10 +184,10 @@ export default function CareerIntelligencePageClient() {
         <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
           {outcomeRows.map((row, index) => (
             <Surface key={row.title} featured={index === 0}>
-              <h2 className="text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1A1A1A]">
+              <h2 className="text-[28px] font-semibold leading-[1.02] tracking-[-0.045em] text-[#1F1F1F]">
                 {row.title}
               </h2>
-              <p className="mt-4 text-[15px] leading-7 text-[#6B6B6B]">{row.description}</p>
+              <p className="mt-4 text-[15px] leading-7 text-[#5A5A5A]">{row.description}</p>
             </Surface>
           ))}
         </div>
@@ -196,15 +196,15 @@ export default function CareerIntelligencePageClient() {
       <section className="mx-auto mt-16 max-w-[1200px]">
         <Surface
           featured
-          className="overflow-hidden border-[rgba(168,132,58,0.28)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,246,236,0.96))] shadow-[0_30px_88px_rgba(33,27,18,0.1)]"
+          className="overflow-hidden border-[rgba(184,150,46,0.28)] bg-[linear-gradient(145deg,rgba(255,255,255,0.98),rgba(250,246,236,0.96))] shadow-[0_30px_88px_rgba(33,27,18,0.1)]"
         >
           <BrandBirdMark />
           <div className="relative mx-auto max-w-[760px] text-center">
             <SectionLabel className="justify-center">HELP CENTER</SectionLabel>
-            <h2 className="mt-4 text-[clamp(2rem,3.2vw,3.35rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+            <h2 className="mt-4 text-[clamp(2rem,3.2vw,3.35rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
               Explore the Help Center without leaving UMATTR.
             </h2>
-            <p className="mx-auto mt-5 max-w-[40rem] text-[15px] leading-8 text-[#6B6B6B] md:text-[16px]">
+            <p className="mx-auto mt-5 max-w-[40rem] text-[15px] leading-8 text-[#5A5A5A] md:text-[16px]">
               Get clearer answers on fit, access, and how Career Intelligence is
               meant to be used. The full help experience stays on the UMATTR
               domain, and the live assistant remains available in the bottom
@@ -214,7 +214,7 @@ export default function CareerIntelligencePageClient() {
             <div className="mt-8 flex items-center justify-center">
               <ButtonLink
                 href="/help"
-                className="premium-button button-primary button-standout rounded-[20px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-8 py-5 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+                className="premium-button button-primary button-standout rounded-[20px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-8 py-5 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)]"
               >
                 Ask the assistant
               </ButtonLink>
@@ -224,12 +224,12 @@ export default function CareerIntelligencePageClient() {
               {helpCenterHighlights.map((item) => (
                 <div
                   key={item}
-                  className="rounded-[20px] border border-[rgba(198,165,92,0.14)] bg-white/76 px-5 py-5 shadow-[0_16px_40px_rgba(33,27,18,0.05)]"
+                  className="rounded-[20px] border border-[rgba(212,175,55,0.14)] bg-white/76 px-5 py-5 shadow-[0_16px_40px_rgba(33,27,18,0.05)]"
                 >
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#A8843A]">
+                  <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E]">
                     Support
                   </div>
-                  <p className="mt-3 text-[14px] leading-7 text-[#6B6B6B]">{item}</p>
+                  <p className="mt-3 text-[15px] leading-7 text-[#5A5A5A]">{item}</p>
                 </div>
               ))}
             </div>
@@ -241,7 +241,7 @@ export default function CareerIntelligencePageClient() {
         <Surface featured className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <SectionLabel>ACCESS</SectionLabel>
-              <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+              <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
               Access{" "}
               <LocalizedText
                 translationKey="products.careerIntelligence"
@@ -249,14 +249,14 @@ export default function CareerIntelligencePageClient() {
               />{" "}
               on Payhip.
             </h2>
-            <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#6B6B6B]">
+            <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#5A5A5A]">
               This package is the premium route for clearer direction, stronger
               positioning, and a more grounded next move.
             </p>
           </div>
           <ButtonLink
             href={PAYHIP_LINKS.careerFamily}
-            className="premium-button button-primary button-standout shrink-0 rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+            className="premium-button button-primary button-standout shrink-0 rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)]"
           >
             Access{" "}
             <LocalizedText

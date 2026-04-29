@@ -135,7 +135,7 @@ export function ButtonLink({
 export function SectionLabel({ children, className = "" }) {
   return (
     <div
-      className={`text-[11px] font-semibold uppercase tracking-[0.32em] text-[#A8843A] ${className}`}
+      className={`text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E] ${className}`}
     >
       {children}
     </div>
@@ -154,13 +154,13 @@ export function SectionHeading({
     <div className={className}>
       {label ? <SectionLabel>{label}</SectionLabel> : null}
       <h1
-        className={`mt-4 text-[clamp(2.4rem,5vw,4.75rem)] font-semibold leading-[0.94] tracking-[-0.055em] text-[#1A1A1A] ${titleClassName}`}
+        className={`mt-4 text-[clamp(2.4rem,5vw,4.75rem)] font-semibold leading-[0.94] tracking-[-0.055em] text-[#1F1F1F] ${titleClassName}`}
       >
         {title}
       </h1>
       {description ? (
         <p
-          className={`mt-5 max-w-[38rem] text-[16px] leading-8 text-[#6B6B6B] md:text-[17px] ${descriptionClassName}`}
+          className={`mt-5 max-w-[38rem] text-[16px] leading-8 text-[#5A5A5A] md:text-[17px] ${descriptionClassName}`}
         >
           {description}
         </p>
@@ -176,8 +176,8 @@ export function Surface({
   compact = false,
 }) {
   const shellClasses = featured
-    ? "border-[rgba(168,132,58,0.24)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(250,247,240,0.94))] shadow-[0_24px_70px_rgba(33,27,18,0.08)]"
-    : "border-[rgba(198,165,92,0.14)] bg-white/88 shadow-[0_18px_52px_rgba(33,27,18,0.06)]";
+    ? "border-[rgba(184,150,46,0.24)] bg-[linear-gradient(180deg,rgba(255,255,255,0.96),rgba(250,247,240,0.94))] shadow-[0_24px_70px_rgba(33,27,18,0.08)]"
+    : "border-[rgba(212,175,55,0.14)] bg-white/88 shadow-[0_18px_52px_rgba(33,27,18,0.06)]";
 
   return (
     <div
@@ -297,10 +297,10 @@ function MarketingStyles() {
   return (
     <style>{`
       :root {
-        --ivory: #F8F6F1;
+        --ivory: #F7F6F2;
         --white: #FFFFFF;
-        --gold: #C6A55C;
-        --gold-deep: #A8843A;
+        --gold: #D4AF37;
+        --gold-deep: #B8962E;
         --gold-primary: #D4AF37;
         --gold-hover: #E6C65C;
         --gold-deep-hover: #B8962E;
@@ -308,23 +308,23 @@ function MarketingStyles() {
         --button-primary-bg-hover: #E6C65C;
         --button-primary-border: #D4AF37;
         --button-primary-border-hover: #E6C65C;
-        --button-primary-text: #1A1A1A;
+        --button-primary-text: #1F1F1F;
         --button-secondary-bg: #D4AF37;
         --button-secondary-bg-hover: #E6C65C;
         --button-secondary-border: #D4AF37;
         --button-secondary-border-hover: #E6C65C;
-        --button-secondary-text: #1A1A1A;
-        --text-primary: #1A1A1A;
-        --text-secondary: #6B6B6B;
-        --border-soft: rgba(198, 165, 92, 0.16);
-        --border-strong: rgba(198, 165, 92, 0.28);
+        --button-secondary-text: #1F1F1F;
+        --text-primary: #1F1F1F;
+        --text-secondary: #5A5A5A;
+        --border-soft: rgba(212, 175, 55, 0.16);
+        --border-strong: rgba(212, 175, 55, 0.28);
         --priority-high: #D4AF37;
-        --priority-medium: #A8843A;
-        --priority-strategic: #6B6B6B;
-        --priority-high-border: rgba(198, 165, 92, 0.28);
-        --priority-medium-border: rgba(198, 165, 92, 0.16);
-        --priority-strategic-border: rgba(198, 165, 92, 0.12);
-        --priority-soft-bg: rgba(248, 246, 241, 0.72);
+        --priority-medium: #B8962E;
+        --priority-strategic: #5A5A5A;
+        --priority-high-border: rgba(212, 175, 55, 0.28);
+        --priority-medium-border: rgba(212, 175, 55, 0.16);
+        --priority-strategic-border: rgba(212, 175, 55, 0.12);
+        --priority-soft-bg: rgba(247, 246, 242, 0.72);
         --shadow-card: 0 22px 68px rgba(33, 27, 18, 0.07), 0 8px 24px rgba(33, 27, 18, 0.04);
         --shadow-hover: 0 28px 84px rgba(33, 27, 18, 0.11), 0 12px 30px rgba(33, 27, 18, 0.07);
         --shadow-nav: 0 10px 40px rgba(35, 28, 18, 0.06);
@@ -373,8 +373,8 @@ function MarketingStyles() {
         pointer-events: none;
         opacity: 0.035;
         background-image:
-          radial-gradient(circle at 18% 18%, rgba(198,165,92,0.14) 0, transparent 28%),
-          radial-gradient(circle at 82% 14%, rgba(168,132,58,0.10) 0, transparent 24%),
+          radial-gradient(circle at 18% 18%, rgba(212,175,55,0.14) 0, transparent 28%),
+          radial-gradient(circle at 82% 14%, rgba(184,150,46,0.10) 0, transparent 24%),
           radial-gradient(circle at 50% 80%, rgba(255,255,255,0.5) 0, transparent 30%);
         mix-blend-mode: multiply;
       }
@@ -464,7 +464,7 @@ function MarketingStyles() {
         bottom: -10px;
         width: 100%;
         height: 1.5px;
-        background: linear-gradient(90deg, rgba(198,165,92,0), rgba(198,165,92,0.95), rgba(198,165,92,0));
+        background: linear-gradient(90deg, rgba(212,175,55,0), rgba(212,175,55,0.95), rgba(212,175,55,0));
         transform: scaleX(0.28);
         transform-origin: center;
         opacity: 0;
@@ -536,7 +536,7 @@ function MarketingStyles() {
         height: 44px;
         border: 0 !important;
         background: transparent !important;
-        color: #1A1A1A !important;
+        color: #1F1F1F !important;
         font-family: inherit !important;
         font-size: 13px !important;
         font-weight: 600 !important;
@@ -546,7 +546,7 @@ function MarketingStyles() {
       }
 
       .gtranslate-shell select option {
-        color: #1A1A1A;
+        color: #1F1F1F;
       }
     `}</style>
   );
@@ -557,7 +557,7 @@ function SiteHeader({ activeHref }) {
 
   return (
     <header className="relative z-10 mx-auto max-w-[1440px] px-6 pt-6 md:px-10 lg:px-12">
-      <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(198,165,92,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
+      <div className="glass fade-up mx-auto flex max-w-[1200px] items-center justify-between rounded-[28px] border border-[rgba(212,175,55,0.16)] px-5 py-4 shadow-[var(--shadow-nav)] md:px-7">
         <ButtonLink
           href="/"
           className="flex items-center gap-3 no-underline"
@@ -578,7 +578,7 @@ function SiteHeader({ activeHref }) {
               <ButtonLink
                 key={item.href}
                 href={item.href}
-                className={`nav-link text-[15px] font-medium tracking-[-0.02em] ${active ? "active text-[#1A1A1A]" : "text-[#1A1A1A]/78 hover:text-[#1A1A1A]"}`}
+                className={`nav-link text-[15px] font-medium tracking-[-0.02em] ${active ? "active text-[#1F1F1F]" : "text-[#1F1F1F]/78 hover:text-[#1F1F1F]"}`}
               >
                 {label}
               </ButtonLink>
@@ -590,7 +590,7 @@ function SiteHeader({ activeHref }) {
           <GTranslateWidget />
           <ButtonLink
             href="/start"
-            className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_10px_30px_rgba(198,165,92,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(198,165,92,0.28)]"
+            className="premium-button button-primary rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-7 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_10px_30px_rgba(212,175,55,0.24)] hover:-translate-y-0.5 hover:shadow-[0_16px_40px_rgba(212,175,55,0.28)]"
           >
             Start Free
           </ButtonLink>
@@ -604,9 +604,9 @@ function SiteFooter({ footerLine = DEFAULT_FOOTER_LINE }) {
   const { t } = useLocale();
 
   return (
-    <footer className="border-t border-[rgba(168,132,58,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
+    <footer className="border-t border-[rgba(184,150,46,0.18)] bg-[linear-gradient(180deg,rgba(255,255,255,0.84),rgba(255,255,255,0.96))]">
       <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 px-6 py-16 md:px-10 lg:grid-cols-[1.08fr_1.92fr] lg:gap-14 lg:px-12">
-        <div className="border-b border-[rgba(198,165,92,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
+        <div className="border-b border-[rgba(212,175,55,0.10)] pb-8 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-10">
           <ButtonLink
             href="/"
             className="block max-w-[240px] no-underline"
@@ -617,25 +617,25 @@ function SiteFooter({ footerLine = DEFAULT_FOOTER_LINE }) {
               className="h-auto w-full object-contain"
             />
           </ButtonLink>
-          <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#6B6B6B] md:text-[16px] md:leading-8">
+          <p className="mt-5 max-w-[24rem] text-[15px] leading-7 text-[#5A5A5A] md:text-[16px] md:leading-8">
             {footerLine}
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             <ButtonLink
               href="/start"
-              className="inline-flex items-center rounded-full border border-[rgba(198,165,92,0.16)] bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A8843A] no-underline transition-all duration-200 hover:border-[rgba(198,165,92,0.28)] hover:text-[#1A1A1A]"
+              className="inline-flex items-center rounded-full border border-[rgba(212,175,55,0.16)] bg-white/80 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E] no-underline transition-all duration-200 hover:border-[rgba(212,175,55,0.28)] hover:text-[#1F1F1F]"
             >
               Start Free
             </ButtonLink>
             <ButtonLink
               href="/programs"
-              className="inline-flex items-center rounded-full border border-[rgba(198,165,92,0.16)] bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A8843A] no-underline transition-all duration-200 hover:border-[rgba(198,165,92,0.28)] hover:text-[#1A1A1A]"
+              className="inline-flex items-center rounded-full border border-[rgba(212,175,55,0.16)] bg-white/80 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E] no-underline transition-all duration-200 hover:border-[rgba(212,175,55,0.28)] hover:text-[#1F1F1F]"
             >
               Programs
             </ButtonLink>
             <ButtonLink
               href="/career-intelligence"
-              className="inline-flex items-center rounded-full border border-[rgba(198,165,92,0.16)] bg-white/80 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A8843A] no-underline transition-all duration-200 hover:border-[rgba(198,165,92,0.28)] hover:text-[#1A1A1A]"
+              className="inline-flex items-center rounded-full border border-[rgba(212,175,55,0.16)] bg-white/80 px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.10em] text-[#B8962E] no-underline transition-all duration-200 hover:border-[rgba(212,175,55,0.28)] hover:text-[#1F1F1F]"
             >
               Career Intelligence
             </ButtonLink>
@@ -646,10 +646,10 @@ function SiteFooter({ footerLine = DEFAULT_FOOTER_LINE }) {
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 lg:pl-2">
           {FOOTER_COLUMNS.map((column) => (
             <div key={column.title}>
-              <div className="text-[12px] font-semibold uppercase tracking-[0.30em] text-[#1A1A1A]">
+              <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                 {column.title}
               </div>
-              <div className="mt-5 space-y-3 text-[15px] text-[#1A1A1A] md:text-[16px]">
+              <div className="mt-5 space-y-3 text-[15px] text-[#1F1F1F] md:text-[16px]">
                 {column.links.map((link) => (
                   <ButtonLink
                     key={link.href}
@@ -683,12 +683,12 @@ export function MarketingChrome({
   mainClassName = "mx-auto max-w-[1440px] px-6 pb-20 pt-10 md:px-10 lg:px-12 lg:pb-28 lg:pt-12",
 }) {
   return (
-    <div className="min-h-screen bg-[#F8F6F1] text-[#1A1A1A] antialiased selection:bg-[#C6A55C]/20">
+    <div className="min-h-screen bg-[#F7F6F2] text-[#1F1F1F] antialiased selection:bg-[#D4AF37]/20">
       <MarketingStyles />
 
       <div className="relative overflow-hidden noise">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(198,165,92,0.14),transparent_32%),radial-gradient(circle_at_82%_14%,rgba(198,165,92,0.08),transparent_24%),radial-gradient(circle_at_50%_45%,rgba(255,255,255,0.85),transparent_40%)]" />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-[560px] bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(248,246,241,0.88)_55%,rgba(248,246,241,0.56)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(212,175,55,0.14),transparent_32%),radial-gradient(circle_at_82%_14%,rgba(212,175,55,0.08),transparent_24%),radial-gradient(circle_at_50%_45%,rgba(255,255,255,0.85),transparent_40%)]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-[560px] bg-[linear-gradient(180deg,rgba(255,255,255,0.96)_0%,rgba(247,246,242,0.88)_55%,rgba(247,246,242,0.56)_100%)]" />
 
         <SiteHeader activeHref={activeHref} />
 

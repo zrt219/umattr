@@ -265,8 +265,8 @@ function scoreSelection(answers) {
 
 function ScorePill({ label, value }) {
   return (
-    <div className="rounded-full border border-[rgba(198,165,92,0.16)] bg-white/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#6B6B6B]">
-      {label}: <span className="text-[#1A1A1A]">{value}</span>
+    <div className="rounded-full border border-[rgba(212,175,55,0.16)] bg-white/70 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.10em] text-[#5A5A5A]">
+      {label}: <span className="text-[#1F1F1F]">{value}</span>
     </div>
   );
 }
@@ -352,10 +352,10 @@ export default function AssessmentClient() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
           <div className="fade-up">
             <SectionLabel>FREE TOOL</SectionLabel>
-            <h1 className="mt-4 max-w-[10ch] text-[clamp(3rem,6vw,4.8rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1A1A1A]">
+            <h1 className="mt-4 max-w-[10ch] text-[clamp(3rem,6vw,4.8rem)] font-semibold leading-[0.93] tracking-[-0.06em] text-[#1F1F1F]">
               Find the right UMATTR route.
             </h1>
-            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#6B6B6B] md:text-[18px]">
+            <p className="mt-6 max-w-[34rem] text-[17px] leading-8 text-[#5A5A5A] md:text-[18px]">
               Answer a few multiple-choice questions and get a direct recommendation
               for the program or route that fits the decision best.
             </p>
@@ -363,50 +363,50 @@ export default function AssessmentClient() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <ButtonLink
                 href="/start"
-                className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+                className="premium-button button-primary rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)]"
               >
                 Start Free
               </ButtonLink>
               <ButtonLink
                 href="/programs"
-                className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                className="premium-button button-secondary rounded-[18px] border border-[rgba(212,175,55,0.18)] bg-white/75 px-6 py-4 text-[15px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
               >
                 View Programs
               </ButtonLink>
             </div>
 
-            <p className="mt-8 max-w-[34rem] text-[14px] leading-7 text-[#6B6B6B]">
+            <p className="mt-8 max-w-[34rem] text-[15px] leading-7 text-[#5A5A5A]">
               The assessment uses the decision, the stakes, and the support level
               to match you to the closest paid route.
             </p>
           </div>
 
           <Surface compact className="fade-up lg:self-end" featured>
-            <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">
+            <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">
               How it works
             </div>
             <div className="mt-4 space-y-5">
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   1. Answer
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   Choose the option that best matches the decision in front of you.
                 </p>
               </div>
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   2. Score
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   We score the answers and find the route with the clearest fit.
                 </p>
               </div>
               <div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#1A1A1A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                   3. Route
                 </div>
-                <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                   You get a direct Payhip link to the program or route that fits
                   best.
                 </p>
@@ -421,10 +421,10 @@ export default function AssessmentClient() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <SectionLabel>ASSESSMENT</SectionLabel>
-              <h2 className="mt-4 max-w-[14ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+              <h2 className="mt-4 max-w-[14ch] text-[clamp(2rem,3vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
                 Five questions. One clear route.
               </h2>
-              <p className="mt-4 max-w-[40rem] text-[15px] leading-7 text-[#6B6B6B]">
+              <p className="mt-4 max-w-[40rem] text-[15px] leading-7 text-[#5A5A5A]">
                 The strongest route usually shows up from the combination of
                 decision type, stakes, and support level.
               </p>
@@ -436,19 +436,19 @@ export default function AssessmentClient() {
             </div>
           </div>
 
-          <div className="mt-7 h-2 w-full overflow-hidden rounded-full bg-[rgba(198,165,92,0.12)]">
+          <div className="mt-7 h-2 w-full overflow-hidden rounded-full bg-[rgba(212,175,55,0.12)]">
             <div
-              className="h-full rounded-full bg-[linear-gradient(90deg,#D2B16A_0%,#C6A55C_55%,#B79247_100%)] transition-all duration-300 ease-out"
+              className="h-full rounded-full bg-[linear-gradient(90deg,#E6C65C_0%,#D4AF37_55%,#B8962E_100%)] transition-all duration-300 ease-out"
               style={{ width: `${progress}%` }}
             />
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-7 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
-            <div className="rounded-[24px] border border-[rgba(198,165,92,0.12)] bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(251,248,242,0.88))] p-5 md:p-6">
-              <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">
+            <div className="rounded-[24px] border border-[rgba(212,175,55,0.12)] bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(251,248,242,0.88))] p-5 md:p-6">
+              <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">
                 Question {step + 1}
               </div>
-              <h3 className="mt-4 max-w-[18ch] text-[clamp(1.7rem,2.4vw,2.2rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-[#1A1A1A]">
+              <h3 className="mt-4 max-w-[18ch] text-[clamp(1.7rem,2.4vw,2.2rem)] font-semibold leading-[0.98] tracking-[-0.05em] text-[#1F1F1F]">
                 {QUESTIONS[step].prompt}
               </h3>
 
@@ -464,25 +464,25 @@ export default function AssessmentClient() {
                       aria-pressed={isSelected}
                       className={`premium-card rounded-[18px] border px-4 py-4 text-left transition-all ${
                         isSelected
-                          ? "border-[rgba(168,132,58,0.36)] bg-white shadow-[0_16px_34px_rgba(33,27,18,0.07)]"
-                          : "border-[rgba(198,165,92,0.14)] bg-white/74 hover:border-[rgba(198,165,92,0.28)] hover:bg-white"
+                          ? "border-[rgba(184,150,46,0.36)] bg-white shadow-[0_16px_34px_rgba(33,27,18,0.07)]"
+                          : "border-[rgba(212,175,55,0.14)] bg-white/74 hover:border-[rgba(212,175,55,0.28)] hover:bg-white"
                       }`}
                     >
                       <div className="flex items-start gap-4">
                         <div
                           className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-[12px] font-semibold ${
                             isSelected
-                              ? "border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] text-[#1A1A1A]"
-                              : "border-[rgba(198,165,92,0.16)] bg-[#FCFBF7] text-[#6B6B6B]"
+                              ? "border-[rgba(184,150,46,0.34)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] text-[#1F1F1F]"
+                              : "border-[rgba(212,175,55,0.16)] bg-[#F7F6F2] text-[#5A5A5A]"
                           }`}
                         >
                           {String(index + 1)}
                         </div>
                         <div className="min-w-0">
-                          <div className="text-[15px] font-semibold leading-6 tracking-[-0.02em] text-[#1A1A1A]">
+                          <div className="text-[15px] font-semibold leading-6 tracking-[-0.02em] text-[#1F1F1F]">
                             {option.label}
                           </div>
-                          <p className="mt-1 text-[13px] leading-6 text-[#6B6B6B]">
+                          <p className="mt-1 text-[15px] leading-6 text-[#5A5A5A]">
                             {option.description}
                           </p>
                         </div>
@@ -495,7 +495,7 @@ export default function AssessmentClient() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <ButtonLink
                   href="/start"
-                  className="premium-button button-secondary rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/88 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                  className="premium-button button-secondary rounded-[16px] border border-[rgba(212,175,55,0.18)] bg-white/88 px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
                 >
                   Start Free
                 </ButtonLink>
@@ -505,7 +505,7 @@ export default function AssessmentClient() {
                     type="button"
                     onClick={goBack}
                     disabled={step === 0}
-                    className="premium-button button-secondary rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/88 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] disabled:cursor-not-allowed disabled:opacity-40 hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                    className="premium-button button-secondary rounded-[16px] border border-[rgba(212,175,55,0.18)] bg-white/88 px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] disabled:cursor-not-allowed disabled:opacity-40 hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
                   >
                     Back
                   </button>
@@ -513,7 +513,7 @@ export default function AssessmentClient() {
                     type="button"
                     onClick={goNext}
                     disabled={!currentAnswer}
-                    className="premium-button button-primary rounded-[16px] border border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.18)] disabled:cursor-not-allowed disabled:opacity-50 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.24)]"
+                    className="premium-button button-primary rounded-[16px] border border-[rgba(184,150,46,0.34)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] shadow-[0_10px_24px_rgba(212,175,55,0.18)] disabled:cursor-not-allowed disabled:opacity-50 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(212,175,55,0.24)]"
                   >
                     {step === QUESTIONS.length - 1 ? "See Result" : "Next"}
                   </button>
@@ -522,33 +522,33 @@ export default function AssessmentClient() {
             </div>
 
             <Surface compact className="lg:sticky lg:top-6">
-              <div className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">
+              <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">
                 What the scoring weighs
               </div>
               <div className="mt-4 space-y-4">
                 <div>
-                  <div className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#1A1A1A]">
+                  <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                     Decision type
                   </div>
-                  <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                  <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                     Whether you need foundations, work output, business judgment, or
                     direction and positioning.
                   </p>
                 </div>
                 <div>
-                  <div className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#1A1A1A]">
+                  <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                     Stakes
                   </div>
-                  <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                  <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                     Low-stakes orientation scores differently from money, systems, and
                     exposure.
                   </p>
                 </div>
                 <div>
-                  <div className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#1A1A1A]">
+                  <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                     Support level
                   </div>
-                  <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                  <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                     The routing logic favors the amount of help you actually want.
                   </p>
                 </div>
@@ -564,36 +564,36 @@ export default function AssessmentClient() {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
               <div>
                 <SectionLabel>YOUR RESULT</SectionLabel>
-                <h2 className="mt-4 max-w-[14ch] text-[clamp(2.1rem,3vw,3.3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+                <h2 className="mt-4 max-w-[14ch] text-[clamp(2.1rem,3vw,3.3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
                   {localizedRecommendation.title}
                 </h2>
-                <p className="mt-5 max-w-[34rem] text-[16px] leading-8 text-[#6B6B6B]">
+                <p className="mt-5 max-w-[34rem] text-[16px] leading-8 text-[#5A5A5A]">
                   {recommendation.summary}
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   <ButtonLink
                     href={recommendation.href}
-                    className="premium-button button-primary rounded-[18px] border border-[rgba(168,132,58,0.38)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-6 py-4 text-[14px] font-semibold tracking-[-0.02em] text-[#1A1A1A] shadow-[0_14px_34px_rgba(198,165,92,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(198,165,92,0.28)]"
+                    className="premium-button button-primary rounded-[18px] border border-[rgba(184,150,46,0.38)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-6 py-4 text-[15px] font-semibold tracking-[-0.02em] text-[#1F1F1F] shadow-[0_14px_34px_rgba(212,175,55,0.22)] hover:-translate-y-0.5 hover:shadow-[0_18px_42px_rgba(212,175,55,0.28)]"
                   >
                     {recommendation.cta}
                   </ButtonLink>
                   <ButtonLink
                     href={recommendation.pageHref}
-                    className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                    className="premium-button button-secondary rounded-[18px] border border-[rgba(212,175,55,0.18)] bg-white/75 px-6 py-4 text-[15px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
                   >
                     {recommendation.pageCta}
                   </ButtonLink>
                   <button
                     type="button"
                     onClick={restart}
-                    className="premium-button button-secondary rounded-[18px] border border-[rgba(198,165,92,0.18)] bg-white/75 px-6 py-4 text-[13px] font-semibold uppercase tracking-[0.16em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+                    className="premium-button button-secondary rounded-[18px] border border-[rgba(212,175,55,0.18)] bg-white/75 px-6 py-4 text-[15px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
                   >
                     Retake Assessment
                   </button>
                 </div>
 
-                <p className="mt-7 max-w-[34rem] text-[14px] leading-7 text-[#6B6B6B]">
+                <p className="mt-7 max-w-[34rem] text-[15px] leading-7 text-[#5A5A5A]">
                   This result is based on your answers to the decision, stakes, and
                   support questions. If the decision needs more human-guided help,
                   {t("products.consulting", "Consulting")} is still available separately.
@@ -601,30 +601,30 @@ export default function AssessmentClient() {
               </div>
 
               <Surface compact className="self-start" featured>
-                <div className="text-[12px] font-semibold uppercase tracking-[0.28em] text-[#A8843A]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.20em] text-[#B8962E]">
                   Why this fit
                 </div>
                 <div className="mt-4 space-y-4">
                   {recommendation.why.map((item) => (
-                    <p key={item} className="text-[15px] leading-7 text-[#6B6B6B]">
+                    <p key={item} className="text-[15px] leading-7 text-[#5A5A5A]">
                       {item}
                     </p>
                   ))}
                 </div>
-                <div className="mt-6 rounded-[18px] border border-[rgba(198,165,92,0.12)] bg-white/72 p-4">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#1A1A1A]">
+                <div className="mt-6 rounded-[18px] border border-[rgba(212,175,55,0.12)] bg-white/72 p-4">
+                  <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                     Confidence
                   </div>
-                  <p className="mt-2 text-[15px] leading-7 text-[#6B6B6B]">
+                  <p className="mt-2 text-[15px] leading-7 text-[#5A5A5A]">
                     {recommendation.confidence}. The recommendation leans on how
                     clearly this route outscored the others.
                   </p>
                 </div>
-                <div className="mt-6 rounded-[18px] border border-[rgba(198,165,92,0.12)] bg-white/72 p-4">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#1A1A1A]">
+                <div className="mt-6 rounded-[18px] border border-[rgba(212,175,55,0.12)] bg-white/72 p-4">
+                  <div className="text-[12px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F]">
                     Payhip link
                   </div>
-                  <p className="mt-2 break-all text-[13px] leading-6 text-[#6B6B6B]">
+                  <p className="mt-2 break-all text-[15px] leading-6 text-[#5A5A5A]">
                     {recommendation.href}
                   </p>
                 </div>
@@ -638,10 +638,10 @@ export default function AssessmentClient() {
         <Surface featured className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <SectionLabel>NEXT STEP</SectionLabel>
-            <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1A1A1A]">
+            <h2 className="mt-4 max-w-[12ch] text-[clamp(2rem,2.8vw,3rem)] font-semibold leading-[0.96] tracking-[-0.05em] text-[#1F1F1F]">
               Start free, then move into the right path.
             </h2>
-            <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#6B6B6B]">
+            <p className="mt-4 max-w-[38rem] text-[15px] leading-7 text-[#5A5A5A]">
               The assessment is the fastest way to get to the right route without
               starting the decision over.
             </p>
@@ -649,19 +649,19 @@ export default function AssessmentClient() {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <ButtonLink
               href="/programs"
-              className="premium-button button-secondary rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/88 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+              className="premium-button button-secondary rounded-[16px] border border-[rgba(212,175,55,0.18)] bg-white/88 px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
             >
               Programs
             </ButtonLink>
             <ButtonLink
               href="/career-intelligence"
-              className="premium-button button-secondary rounded-[16px] border border-[rgba(198,165,92,0.18)] bg-white/88 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] hover:-translate-y-0.5 hover:border-[rgba(198,165,92,0.32)] hover:bg-white"
+              className="premium-button button-secondary rounded-[16px] border border-[rgba(212,175,55,0.18)] bg-white/88 px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] hover:-translate-y-0.5 hover:border-[rgba(212,175,55,0.32)] hover:bg-white"
             >
               {t("products.careerIntelligence", "Career Intelligence")}
             </ButtonLink>
             <ButtonLink
               href={CONSULTING_INQUIRY_HREF}
-              className="premium-button button-primary rounded-[16px] border border-[rgba(168,132,58,0.34)] bg-[linear-gradient(180deg,#D2B16A_0%,#C6A55C_52%,#B79247_100%)] px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1A1A] shadow-[0_10px_24px_rgba(198,165,92,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(198,165,92,0.24)]"
+              className="premium-button button-primary rounded-[16px] border border-[rgba(184,150,46,0.34)] bg-[linear-gradient(180deg,#E6C65C_0%,#D4AF37_52%,#B8962E_100%)] px-4 py-3 text-[13px] font-semibold uppercase tracking-[0.10em] text-[#1F1F1F] shadow-[0_10px_24px_rgba(212,175,55,0.18)] hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(212,175,55,0.24)]"
             >
               Request {t("products.consulting", "Consulting")}
             </ButtonLink>
