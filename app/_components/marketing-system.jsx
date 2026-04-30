@@ -13,6 +13,7 @@ export { FREE_TOOL_LINKS, PAYHIP_LINKS, PROGRAM_DETAIL_LINKS, START_FREE_HREF };
 
 export const SITE_NAV_ITEMS = [
   { key: "common.home", fallback: "Home", href: "/" },
+  { label: "Products", href: "/products" },
   { label: "AI Programs", href: "/programs" },
   {
     key: "products.careerIntelligence",
@@ -28,6 +29,7 @@ export const FOOTER_COLUMNS = [
     title: "Navigation",
     links: [
       { key: "common.home", fallback: "Home", href: "/" },
+      { label: "Products", href: "/products" },
       { label: "AI Programs", href: "/programs" },
       {
         key: "products.careerIntelligence",
